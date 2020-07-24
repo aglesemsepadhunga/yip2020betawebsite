@@ -7,14 +7,39 @@ Try to write all the code as neat and descriptive as possible with proper indent
 Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
 <!-- ==========Write all your code below this point============ -->
 
+<div class="container">
+<h4>Roles for the first stage of project</h4>
+<ul class = "collapsible popout" data-collapsible = "accordion">
+   <li>
+      <div class = "collapsible-header">
+         <i class = "material-icons">filter_drama</i>mahil</div>
+      <div class = "collapsible-body"><p>why_yip,prev_yip, winners</p></div>
+   </li>
 
-Roles for the first stage of yip-project
-mahil-why_yip,prev_yip, winners
-keerthi-about,media,contacts
-srijank-themes,msg_from_org,testimonials,gallery
-shivoy-homepage, all forms, nav-bar and other common stuff
+   <li>
+      <div class = "collapsible-header">
+         <i class = "material-icons">place</i>keerthi</div>
+      <div class = "collapsible-body"><p>about,media,contacts.</p></div>
+   </li>
 
+   <li>
+      <div class = "collapsible-header">
+         <i class = "material-icons">whatshot</i>srijanak</div>
+      <div class = "collapsible-body"><p>themes,msg_from_org,testimonials,gallery.</p></div>
+   </li>
+   <li>
+      <div class = "collapsible-header">
+         <i class = "material-icons">whatshot</i>Shivoy</div>
+      <div class = "collapsible-body"><p>homepage, all forms, nav-bar and other common stuff.</p></div>
+   </li>
+</ul>
+</div>
 
-
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
+</script>
 <!-- ==========Write all your code above this point============ -->
 {% endblock %}

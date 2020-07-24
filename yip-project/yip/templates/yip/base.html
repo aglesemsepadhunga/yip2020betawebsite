@@ -11,11 +11,28 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <title>YIP</title>
+  <style media="screen">
+    #slide-out{
+      width:100%;
+      background-color: rgba(0,0,0,0.8);
+
+    }
+    #main-nav-trig{
+      position: fixed;
+      top:10px;
+      left:10px;
+    }
+    #main-nav-close{
+      position: fixed;
+      top:10px;
+      right:10px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- navbar -->
-  <div class="navbar-fixed">
+  <!-- <div class="navbar-fixed">
     <nav class="nav-wrapper indigo">
       <div class="container">
         <a href="#" class="brand-logo">Site Title</a>
@@ -36,17 +53,34 @@
       <li><a href="">Home</a></li>
       <li><a href="">About</a></li>
       <li><a href="">Contact</a></li>
+    </ul> -->
+
+
+    <ul id="slide-out" class="sidenav white-text">
+      <li><a href="#!" class="white-text">Link</a></li>
+      <li><a href="#!" class="white-text">Link</a></li>
+      <li><a href="#!" class="white-text">Link</a></li>
+      <li><a href="#!" class="white-text">Link</a></li>
+      <li><a href="#!" class="white-text">Link</a></li>
+      <li><a class="sidenav-close" id="main-nav-close"><i class="material-icons white-text">close</i></a></li>
+
     </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn" id="main-nav-trig"><i class="material-icons">menu</i></a>
   {% block content %}
   {% endblock %}
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <!-- <script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> -->
+
   <script>
     $(document).ready(function(){
       $('.sidenav').sidenav();
     });
+
   </script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </body>
 </html>
