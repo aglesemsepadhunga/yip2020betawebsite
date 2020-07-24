@@ -54,18 +54,33 @@
       <li><a href="">About</a></li>
       <li><a href="">Contact</a></li>
     </ul> -->
-
-
     <ul id="slide-out" class="sidenav white-text">
+      <!-- <li><a href="#!" class="white-text">Link</a></li>
       <li><a href="#!" class="white-text">Link</a></li>
       <li><a href="#!" class="white-text">Link</a></li>
-      <li><a href="#!" class="white-text">Link</a></li>
-      <li><a href="#!" class="white-text">Link</a></li>
-      <li><a href="#!" class="white-text">Link</a></li>
-      <li><a class="sidenav-close" id="main-nav-close"><i class="material-icons white-text">close</i></a></li>
+      <li><a href="#!" class="white-text">Link</a></li> -->
+      <div class="container">
+        <div class="row white-text">
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'home' %}">Home</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'about' %}">About</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'why_yip' %}">Why YIP?</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'themes' %}">Themes</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'msg_from_org' %}">Message</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'winners' %}">Winners</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'gallery' %}">Gallery</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'media' %}">Outreach</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'testimonials' %}">Testimonials</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'contacts' %}">Contacts</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2019</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url '' %}">YIP 2018</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'login' %}">Login</a></div>
+          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'signup' %}">Sign Up</a></div>
+        </div>
+      </div>
+      <li><a href="#" class="sidenav-close" id="main-nav-close">hi<i class="small material-icons white-text">close</i></a></li>
 
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn" id="main-nav-trig"><i class="material-icons">menu</i></a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating pulse large" id="main-nav-trig"><i class="material-icons">menu</i></a>
   {% block content %}
   {% endblock %}
 
