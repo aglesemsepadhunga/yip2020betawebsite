@@ -6,9 +6,8 @@ If you are using Ubuntu and clone this repo in your Desktop. Then to get the Dja
 for installing django, you should use this command-> pip install django==2.2.*
 
 cd Desktop/YIP2020betawebsite/yip-project/
-pip install psycopg2-binary
-python3 manage.py makemigrations
-python3 manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 
 This will open up the server and you will get a link of your website which would look something like this http://127.0.0.1:8000/

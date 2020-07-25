@@ -21,7 +21,11 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
          <i class = "material-icons">whatshot</i>keerthi</div>
       <div class = "collapsible-body"><p>about,media,contacts.</p></div>
    </li>
-
+   <li>
+      <div class = "collapsible-header">
+         <i class = "material-icons">whatshot</i>Bhargavi</div>
+      <div class = "collapsible-body"><p>Desidn and content management</p></div>
+   </li>
    <li>
       <div class = "collapsible-header">
          <i class = "material-icons">whatshot</i>srijanak</div>
@@ -36,9 +40,8 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 </div>
 
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, options);
+$(document).ready(function(){
+    $('.collapsible').collapsible();
   });
 </script>
 <!-- ==========Write all your code above this point============ -->
