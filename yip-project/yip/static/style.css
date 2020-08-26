@@ -13,7 +13,7 @@ body{
   background-color: red;
   z-index: 7;
 }
-.slides img{            filter: brightness(30%); }
+.slides img{filter: brightness(30%); }
 #heading div{
   margin: 0 auto;
 }
@@ -99,15 +99,36 @@ body{
 .heading1, .heading2{
   width: 100%;
   font-size: 70px;
-  color: #76ff03;
-  font-weight: bold;
+/*  color: #76ff03;
+*/  font-weight: bold;
   font-family: sans-serif;
-/*  color: #16a085;
-*/  letter-spacing: 0.5em;
+  color: #16a085;
+  letter-spacing: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#heading div h4{
+  position: relative;
+  color: white;
+}
+#heading div h3{
+  position: relative;
+  color: #16a085;
+  font-weight: 100;
+}
+#knowmore{
+  position: relative;
+border-radius: 10rem;
+background-color: transparent;
+border: 3px solid #16a085 !important;
+color: #16a085;
+padding: 10px 20px;
+}
+#knowmore:hover{
+  background-color: #16a085;
+  color: white;
 }
 .heading2{color: yellow;}
 div span {
@@ -121,9 +142,61 @@ div span::after {
 }
 div span:hover {
 color: yellow;font-size: 80px;}
+
+#I {
+  opacity: 1;
+  animation: flickerI 3s linear  1;
+  animation-delay: 3s;
+}
+#I::after {
+  content: '';
+  width: 150%;
+  box-shadow: -50px 0px 100px 20px white;
+}
+@keyframes flickerI {
+  0% {
+    opacity: 0.9;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes flicker{
   0% {
-    opacity: 0;
+    opacity: 0.9;
   }
   15% {
     opacity: 0.1;

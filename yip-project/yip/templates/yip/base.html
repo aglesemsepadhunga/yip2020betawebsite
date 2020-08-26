@@ -64,7 +64,7 @@
 
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating pulse large" id="main-nav-trig"><i class="material-icons">menu</i></a>
-    <img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc">
+    <a href="{% url 'home' %}" title="Young Innovators Program"><img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc"></a>
   {% block content %}
   {% endblock %}
 

@@ -27,6 +27,9 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
       top:10px;
       right:10px;
     }
+    #logox{
+      z-index: 6;
+    }
     p{
       font-size: 1.2em;
     }
@@ -55,6 +58,7 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating pulse large" id="main-nav-trig"><i class="material-icons">menu</i></a>
+    <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc"></a>
     <ul class="slides">
       <li>
         <img src="{% static 'spic.jpg' %}"> <!-- random image -->
