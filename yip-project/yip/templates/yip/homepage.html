@@ -1,42 +1,100 @@
+{% extends 'yip/base.html' %}
+
+{% block content %}
 {% load staticfiles%}
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>YIP</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-  <div class="content">
-  <div class="content__container">
-    <p class="content__container__text">
-      Hello
-    </p>
-    
-    <ul class="content__container__list">
-      <li class="content__container__list__item">world !</li>
-      <li class="content__container__list__item">innovators !</li>
-      <li class="content__container__list__item">students !</li>
-      <li class="content__container__list__item">everybody !</li>
-    </ul>
-  </div>
-</div>
+ -->
+ <link rel="stylesheet" href="{% static 'style.css' %}">
 
-<div class="view">
-  <div class="plane main">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+<div class="cover">
+<!--     <img src="{% static 'bg.jpg' %}">
+ --><div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'bg.jpg' %}"> <!-- random image -->
+
+      </li>
+      <li>
+        <img src="{% static 'homepic2.jpg' %}"> <!-- random image -->
+
+      </li>
+      <li>
+        <img src="{% static 'bg.jpg' %}"> <!-- random image -->
+      
+      </li>
+    </ul></div>
+     <div></div>
+
+</div>
+<img src="{% static 'logo.png' %}" class="responsive-img" id="logo-bulb">
+<img src="{% static 'kgplogo.png' %}" class="responsive-img" id="logo-kgp">
+<img src="{% static 'barclogox.png' %}" class="responsive-img" id="logo-barc">
+ <div id="heading" class="valign-wrapper">
+  <div>
+<div class="heading1">
+  <span>Y</span>
+  <span>O</span>
+  <span>U</span>
+  <span>N</span>
+  <span>G</span>
   </div>
+
+<div class="heading2">
+  <span>I</span>
+  <span>N</span>
+  <span>N</span>
+  <span>O</span>
+  <span>V</span>
+  <span>A</span>
+  <span>T</span>
+  <span>O</span>
+  <span>R</span>
+  <span>S</span>
+  </div>
+
+<div class="heading1">
+  <span>P</span>
+  <span>R</span>
+  <span>O</span>
+  <span>G</span>
+  <span>R</span>
+  <span>A</span>
+  <span>M</span>
 </div>
-<div class="frame">
-  <img src="{% static 'logo.png' %}" class="responsive-img">
+<div class="heading1">
+  <span>2</span>
+  <span>0</span>
+  <span>2</span>
+  <span>0</span>
 </div>
-<script src="{% static 'script.js' %}"></script>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.slider').slider();
+  });
+</script>
+{% endblock %}
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+
+  </script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </body>
 </html>
+ -->
