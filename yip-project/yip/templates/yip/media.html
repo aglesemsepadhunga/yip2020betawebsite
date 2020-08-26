@@ -1,0 +1,119 @@
+{% extends 'yip/base.html' %}
+
+{% block content %}
+
+<!-- This is the Media Outreach section of the website.
+NOTE-This page also contains the sponsors from here . . http://www.yip.iitkgp.ac.in/sponsors/
+Try to write all the code as neat and descriptive as possible with proper indentations as others will also have to work on the same code, so the code must be human-readable and not just machine readable.
+Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
+<!-- ==========Write all your code below this point============ -->
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<title>media outreach</title>
+<style type="text/css">
+  .container{
+    text-align: center;
+  }
+  html {
+height:100%;
+}
+
+body {
+margin:0;
+}
+
+.bg {
+animation:slide 3s ease-in-out infinite alternate;
+background-image: linear-gradient(-60deg, #808080 50%,  #FFDF00 50%);
+bottom:0;
+left:-50%;
+opacity:.5;
+position:fixed;
+right:-50%;
+top:0;
+z-index:-1;
+}
+
+.bg2 {
+animation-direction:alternate-reverse;
+animation-duration:4s;
+}
+
+.bg3 {
+animation-duration:5s;
+}
+
+@keyframes slide {
+0% {
+  transform:translateX(-25%);
+}
+100% {
+  transform:translateX(25%);
+}
+}
+h3 {
+text-shadow: 2px 2px 5px red;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+  <h3>MEDIA OUTREACH</h3><br><br><br>
+  <div class="row">
+    <div class="col l3 m3 s12">
+      <img src="/static/it.png" alt="" class="responsive-img">
+    </div><br>
+    <div class="col l3 m3 s12">
+      <img src="/static/theeconomictimes.png" alt="" class="responsive-img"><br>
+    </div>
+    <div class="col l3 m3 s12">
+      <img src="/static/bs.png" alt="" class="responsive-img"><br>
+    </div>
+    <div class="col l3 m3 s12">
+      <img src="/static/ndtv.png" alt="" class="responsive-img">
+    </div>
+
+
+  </div><br>
+   <div class="row">
+    <div class="col l3 m3 s12">
+      <img src="/static/jj.png" alt="" class="responsive-img">
+    </div>
+    <div class="col l3 m3 s12">
+      <img src="/static/ndtv.png" alt="" class="responsive-img">
+    </div>
+    <div class="col l3 m3 s12">
+      <img src="/static/mp.png" alt="" class="responsive-img">
+    </div>
+    <div class="col l3 m3 s12">
+      <img src="/static/dq.png" alt="" class="responsive-img">
+    </div>
+
+  </div>
+
+
+</div>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+
+
+  });
+</script>
+
+
+
+
+<!-- ==========Write all your code above this point============ -->
+{% endblock %}

@@ -8,7 +8,255 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 <!-- ==========Write all your code below this point============ -->
 
 
+<!-- font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<title>WHY-YIP?</title>
+<style>
+  .html,body{
+      width:100%;
+      height: 100%;
+      margin:0px;
+      padding:0px;
+      overflow-x:hidden;
+  }
+.txt{
+   position: relative;
+   float:right;
+   top:30%;
+   color:yellow;
+   font-size: 50px;
+   animation-name: moveinleft;
+   animation-duration: 1.5s;
+   font-weight: bold;
+}.iitkgp{
+   position:relative;
+   left:74%;
+   top:70%;
+   color:yellow;
+   font-size: 50px;
+   animation-name: moveinleft;
+   animation-duration: 1.5s;
+   font-weight: bold;
+}
+.campus{
+  font-size: 40px;
+  color:tomato;
+ padding-top:40px;
+ padding-bottom: 40px;
+ position: relative;
+ left:35%;
+}
 
+.tat{
+  position: relative;
+  top:0%;
+  height:400px;
+
+  background-image: url("https://img.xda-cdn.com/HrnZ2Vsef7PQnxlFL08fmN0Er28=/http%3A%2F%2Fimages.tapatalk-cdn.com%2F15%2F12%2F26%2Fd684412011982fcd055f251d6b91c08e.jpg");
+  z-index:-1;
+}
+.col:hover{
+  transform: scale(1.0);
+  z-index:1000;
+}
+.yy{
+   position: relative;
+   top:5%;
+   left:42%;
+   color:tomato;
+   font-size:50px;
+   border-bottom: 20px;
+  border-color: tomato;
+  font-weight: bold;
+}
+@keyframes moveinleft{
+  0%{
+    opacity:0;
+    transform: translateX(-100px);
+  }
+  80%{
+  transform: translateX(30px);
+  }
+  100%{
+      opacity:1;
+      transform: translateX(0);
+
+  }
+}
+.section{
+   padding-top:8vw;
+   padding-bottom:6vw;
+}
+@media screen and (max-width:670px){
+   .txt{
+      color:yellow ;
+      font-size: 20px;
+   }
+   .iitkgp{
+       color:yellow;
+       font-size:20px;
+       position:absolute;
+       top:60%;
+       left:67%;
+   }
+   .tat{
+  position: relative;
+  top:0%;
+  height:300px;
+  width:100%;
+  background-image: url("https://img.xda-cdn.com/HrnZ2Vsef7PQnxlFL08fmN0Er28=/http%3A%2F%2Fimages.tapatalk-cdn.com%2F15%2F12%2F26%2Fd684412011982fcd055f251d6b91c08e.jpg");
+  z-index:1000;
+}
+   .yy{
+       position:relative;
+       font-size:30px;
+       color:tomato;
+       top:2%;
+       left:40%;
+       z-index: 1000000;
+
+   }
+   .col:hover{
+  transform: scale(1.1);
+  z-index:1000;
+}
+.campus{
+   font-size: large;
+}
+.card-image{
+   size: medium;
+}
+}
+
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+
+
+     <div class="tat responsive-img">
+         <div class="txt">
+             YOUNG INNOVATORS PROGRAMME
+         </div>
+         <div class="iitkgp">
+             IIT KHARAGPUR
+         </div>
+
+     </div>
+
+
+
+
+</div>
+
+<div class="yy">
+  <i class="fas fa-atom fa-4x text-primary mb-4"></i>
+    WHY YIP?
+</div>
+<!-- photo / grid -->
+<section class="container section" id="photo's">
+<div class="row">
+<div class="col s12 l4">
+    <img src="/static/prom.jpg" class="responsive-img materialboxed">
+</div>
+ <div class="col s12 l6  offset-l1">
+  <h2 class="indigo-text text-dargen-4">INNOVATION</h2>
+  <p>We majorly concentrate on promoting the culture of innovation among students
+      in more broarder domain for example science and technology.
+  </p>
+ </div>
+</div>
+<div class="row">
+  <div class="col s12 l4 push-l7 offset-l1">
+      <img src="/static/prom1.jpg" class="responsive-img materialboxed">
+  </div>
+   <div class="col s12 l6 pull-l4 right-align">
+    <h2 class="indigo-text text-dargen-4">CREATIVITY</h2>
+    <p>   Creativity is surely a game changer in this competitive world.YIP expects students to gain more creative approach in
+        various themes rather than a subjective one
+
+   </div>
+  </div>
+  <div class="row">
+      <div class="col s12 l4">
+          <img src="/static/prom22.jpg" class="responsive-img materialboxed">
+      </div>
+       <div class="col s12 l6 offset-l1">
+        <h2 class="indigo-text text-dargen-4">PERSEVERANCE</h2>
+        <p> YIP is structured such a way that students are encouraged in four levels . This builds students confidence and perseverance
+            enormously.
+        </p>
+       </div>
+  </div>
+
+
+</section>
+<!--Parallax-->
+<!--
+<div class="parallax-container">
+ <div class="parallax">
+     <img src="/static/imm.jpg"alt="" class="responsive-img">
+ </div>
+
+</div>
+<div class="campus">
+    VISITING IIT KHARAGPUR
+</div>
+<div class="container">
+
+  <div class="row">
+      <div class="col s12 l6">
+          <div class="card">
+          <div class="card-image">
+            <img src="/static/vg2.jpeg" alt="">
+          </div>
+              <div class="card content">
+                  <sapn class="card-title">
+                      Visiting Campus
+                  </sapn>
+                  Students qualified for round 3-4 will get
+                  an amazing chance to visit our 2200 acre campus.
+              </div>
+          </div>
+      </div>
+
+
+      <div class="col s12 l6">
+          <div class="card">
+          <div class="card-image">
+            <img src="/static/lig.jpeg" alt="">
+          </div>
+              <div class="card content">
+                  <sapn class="card-title">
+                      Visiting Campus
+                  </sapn>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+</div>
+-->
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $('.parallax').parallax();
+  });
+</script>
 
 
 
