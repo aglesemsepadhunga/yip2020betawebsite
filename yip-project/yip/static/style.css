@@ -1,3 +1,108 @@
+{% extends 'yip/base.html' %}
+
+{% block content %}
+{% load staticfiles%}
+ <link rel="stylesheet" href="{% static 'style.css' %}">
+
+<div class="cover">
+<!--     <img src="{% static 'bg.jpg' %}">
+ --><div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'bg.jpg' %}"> <!-- random image -->
+
+      </li>
+      <li>
+        <img src="{% static 'homepic2.jpg' %}"> <!-- random image -->
+
+      </li>
+      <li>
+        <img src="{% static 'prom.jpg' %}"> <!-- random image -->
+      
+      </li>
+    </ul></div>
+     <div></div>
+
+</div>
+<img src="{% static 'logo.png' %}" class="responsive-img" id="logo-bulb">
+<img src="{% static 'kgplogo.png' %}" class="responsive-img" id="logo-kgp">
+<img src="{% static 'barclogox.png' %}" class="responsive-img" id="logo-barc">
+ <div id="heading" class="valign-wrapper">
+  <div>
+<!-- <div class="heading1">
+  <span id="I">Y</span>
+  <span id="I">O</span>
+  <span id="I">U</span>
+  <span>N</span>
+  <span>G</span>
+  </div>
+
+<div class="heading2">
+  <span>I</span>
+  <span>N</span>
+  <span>N</span>
+  <span>O</span>
+  <span>V</span>
+  <span>A</span>
+  <span>T</span>
+  <span>O</span>
+  <span>R</span>
+  <span>S</span>
+  </div>
+
+<div class="heading1">
+  <span>P</span>
+  <span>R</span>
+  <span>O</span>
+  <span>G</span>
+  <span>R</span>
+  <span>A</span>
+  <span>M</span>
+</div>
+ -->
+<h1>YOUNG INNOVATORS PROGRAM</h1>
+<h4>2020</h4>
+<h3>IIT Kharagpur</h3><br>
+<a id="knowmore">Know More!</a>
+  <div class="tap-target" data-target="knowmore">
+    <div class="tap-target-content">
+      <h5>Title</h5>
+      <p>A bunch of text</p>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.slider').slider();
+  });
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +118,7 @@ body{
   background-color: red;
   z-index: 7;
 }
-.slides img{            filter: brightness(30%); }
+.slides img{filter: brightness(30%); }
 #heading div{
   margin: 0 auto;
 }
@@ -99,15 +204,40 @@ body{
 .heading1, .heading2{
   width: 100%;
   font-size: 70px;
-  color: #76ff03;
-  font-weight: bold;
+/*  color: #76ff03;
+*/  font-weight: bold;
   font-family: sans-serif;
-/*  color: #16a085;
-*/  letter-spacing: 0.5em;
+  color: #16a085;
+  letter-spacing: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#heading div h4{
+  position: relative;
+  color: white;
+}
+#heading div h3{
+  position: relative;
+  color: #16a085;
+  font-weight: 100;
+}
+#heading div h1{
+  position: relative;
+  color: #16a085;
+}
+#knowmore{
+  position: relative;
+border-radius: 10rem;
+background-color: transparent;
+border: 3px solid #16a085 !important;
+color: #16a085;
+padding: 10px 20px;
+}
+#knowmore:hover{
+  background-color: #16a085;
+  color: white;
 }
 .heading2{color: yellow;}
 div span {
@@ -121,9 +251,61 @@ div span::after {
 }
 div span:hover {
 color: yellow;font-size: 80px;}
+
+#I {
+  opacity: 1;
+  animation: flickerI 3s linear  1;
+  animation-delay: 3s;
+}
+#I::after {
+  content: '';
+  width: 150%;
+  box-shadow: -50px 0px 100px 20px white;
+}
+@keyframes flickerI {
+  0% {
+    opacity: 0.9;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes flicker{
   0% {
-    opacity: 0;
+    opacity: 0.9;
   }
   15% {
     opacity: 0.1;

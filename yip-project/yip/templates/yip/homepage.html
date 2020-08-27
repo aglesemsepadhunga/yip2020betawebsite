@@ -2,74 +2,102 @@
 
 {% block content %}
 {% load staticfiles%}
- <link rel="stylesheet" href="{% static 'style.css' %}">
+<!-- 
+Try to write all the code as neat and descriptive as possible with proper indentations as others will also have to work on the same code, so the code must be human-readable and not just machine readable.
+Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
+<!-- ==========Write all your code below this point============ -->
+<style>
+  .bgcover{
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 100%);
 
-<div class="cover">
-<!--     <img src="{% static 'bg.jpg' %}">
- --><div class="slider fullscreen">
+    height: 100vh;width: 100vw;position: fixed; top: 0;
+        left: 0;
+  }
+  #main-nav-trig{
+    top: 30px;
+    left: 30px;
+  }
+  h1{
+      color: #16a085;
+      line-height: 0.7em;
+    }
+    #knowmore{
+  position: relative;
+border-radius: 10rem;
+background-color: transparent;
+border: 3px solid #ed6c05 !important;
+color: #ed6c05;
+padding: 10px 20px;
+transition: 0.5s;
+cursor: pointer;
+}
+#knowmore:hover{
+  background-color: #ed6c05;
+  color: white;
+}
+#logo-kgp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 80px;
+  transition: 1s;
+  z-index: 6;
+}
+#logo-kgp:hover{
+  bottom: 10px;
+  right: 10px;
+  height: 100px;
+}
+    </style>
+  <div class="slider fullscreen">
+    <a href="http://www.iitkgp.ac.in/"><img src="{% static 'kgplogo.png' %}" id="logo-kgp" class="responsive-img"></a>
+
     <ul class="slides">
       <li>
-        <img src="{% static 'bg.jpg' %}"> <!-- random image -->
-
-      </li>
-      <li>
         <img src="{% static 'homepic2.jpg' %}"> <!-- random image -->
-
+        <div class="bgcover"></div>
+        <div class="caption left-align" style="left: 5%;">
+          <h1>YOUNG</h1>
+          <h1>INNOVATORS</h1>
+          <h1>PROGRAM</h1>
+          <h3>2020</h3>
+          <h4>IIT KHARAGPUR</h4><br><br>
+          <a id="knowmore" data-target="slide-out" class="sidenav-trigger">KNOW MORE</a>
+        </div>
       </li>
-      <li>
+            <li>
         <img src="{% static 'bg.jpg' %}"> <!-- random image -->
-      
+        <div class="bgcover"></div>
+        <div class="caption left-align" style="left: 5%;">
+          <h1 class="green-text">YOUNG</h1>
+          <h1 class="green-text">INNOVATORS</h1>
+          <h1 class="green-text">PROGRAM</h1>
+          <h3>2020</h3>
+          <h4>IIT KHARAGPUR</h4><br><br>
+          <a id="knowmore" data-target="slide-out" class="sidenav-trigger">KNOW MORE</a>
+        </div>
       </li>
-    </ul></div>
-     <div></div>
-
-</div>
-<img src="{% static 'logo.png' %}" class="responsive-img" id="logo-bulb">
-<img src="{% static 'kgplogo.png' %}" class="responsive-img" id="logo-kgp">
-<img src="{% static 'barclogox.png' %}" class="responsive-img" id="logo-barc">
- <div id="heading" class="valign-wrapper">
-  <div>
-<div class="heading1">
-  <span>Y</span>
-  <span>O</span>
-  <span>U</span>
-  <span>N</span>
-  <span>G</span>
+            <li>
+        <img src="{% static 'prom.jpg' %}"> <!-- random image -->
+        <div class="bgcover"></div>
+        <div class="caption left-align" style="left: 5%;">
+          <h1 class="cyan-text">YOUNG</h1>
+          <h1 class="cyan-text">INNOVATORS</h1>
+          <h1 class="cyan-text">PROGRAM</h1>
+          <h3>2020</h3>
+          <h4>IIT KHARAGPUR</h4><br><br>
+          <a id="knowmore" data-target="slide-out" class="sidenav-trigger">KNOW MORE</a>
+        </div>
+      </li>
+    </ul>
   </div>
-
-<div class="heading2">
-  <span>I</span>
-  <span>N</span>
-  <span>N</span>
-  <span>O</span>
-  <span>V</span>
-  <span>A</span>
-  <span>T</span>
-  <span>O</span>
-  <span>R</span>
-  <span>S</span>
-  </div>
-
-<div class="heading1">
-  <span>P</span>
-  <span>R</span>
-  <span>O</span>
-  <span>G</span>
-  <span>R</span>
-  <span>A</span>
-  <span>M</span>
-</div>
-<div class="heading1">
-  <span>2</span>
-  <span>0</span>
-  <span>2</span>
-  <span>0</span>
-</div>
-</div>
-</div>
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
     $('.slider').slider();
   });
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
 </script>
+<!-- ==========Write all your code above this point============ -->
 {% endblock %}

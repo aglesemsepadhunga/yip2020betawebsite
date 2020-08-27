@@ -24,18 +24,27 @@
       position: fixed;
       top:10px;
       left:10px;
+      z-index: 6;
     }
     #main-nav-close{
       position: fixed;
       top:10px;
       right:10px;
     }
-    #logox{
-      position: fixed;
-      top:10px;
-      right:10px;
-      height: 100px;
-    }
+      #logox{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 100px;
+  transition: 1s;
+  z-index: 6;
+}
+#logox:hover{
+  top: 10px;
+  right: 10px;
+  height: 120px;
+}
+
   </style>
 </head>
 <body>
@@ -63,8 +72,8 @@
       <li><a href="#" class="sidenav-close" id="main-nav-close">hi<i class="small material-icons white-text">close</i></a></li>
 
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating pulse large" id="main-nav-trig"><i class="material-icons">menu</i></a>
-    <img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc">
+    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating large" id="main-nav-trig"><i class="material-icons">menu</i></a>
+    <a href="{% url 'home' %}" title="Young Innovators Program"><img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc"></a>
   {% block content %}
   {% endblock %}
 
