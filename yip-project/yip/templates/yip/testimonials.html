@@ -11,54 +11,11 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
     background-color: rgba(0,0,0,0.8);
     padding: 20px;
   }
-      #slide-out{
-      width:100%;
-      background-color: rgba(0,0,0,0.8);
-
-    }
-    #main-nav-trig{
-      position: fixed;
-      top:10px;
-      left:10px;
-      z-index: 6;
-    }
-    #main-nav-close{
-      position: fixed;
-      top:10px;
-      right:10px;
-    }
-    #logox{
-      z-index: 6;
-    }
     p{
       font-size: 1.2em;
     }
 </style>
   <div class="slider fullscreen">
-    <ul id="slide-out" class="sidenav white-text valign-wrapper">
-      <div class="container">
-        <div class="row white-text center-align">
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'home' %}">Home</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'about' %}">About</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'why_yip' %}">Why YIP?</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'themes' %}">Themes</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'msg_from_org' %}">Message</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'winners' %}">Winners</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'gallery' %}">Gallery</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'media' %}">Outreach</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'testimonials' %}">Testimonials</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'contacts' %}">Contacts</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2019</a></div>
-          <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2018</a></div>
-          <div class="col s12 l6"><a class="flow-text" href="{% url 'login' %}">Login</a></div>
-          <div class="col s12 l6"><a class="flow-text" href="{% url 'signup' %}">Sign Up</a></div>
-        </div>
-      </div>
-      <li><a href="#" class="sidenav-close" id="main-nav-close">hi<i class="small material-icons white-text">close</i></a></li>
-
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating pulse large" id="main-nav-trig"><i class="material-icons">menu</i></a>
-    <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" id="logox" class="responsive-img" id="logo-barc"></a>
     <ul class="slides">
       <li>
         <img src="{% static 'spic.jpg' %}"> <!-- random image -->
@@ -98,9 +55,6 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
     $(document).ready(function(){
     $('.slider').slider();
   });
-    $(document).ready(function(){
-      $('.sidenav').sidenav();
-    });
 </script>
 <!-- ==========Write all your code above this point============ -->
 {% endblock %}
