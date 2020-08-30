@@ -1,24 +1,23 @@
 <html lang="en">
 <head>
   {% load staticfiles %}
-  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/gif">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="{% static 'logo.png' %}">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <title>YIP</title>
+  <title>Young Innovators Program</title>
   <style media="screen">
     #slide-out{
       width:100%;
       background-color: rgba(0,0,0,0.8);
-
     }
     #main-nav-trig{
       position: fixed;
@@ -69,7 +68,7 @@
           <div class="col s12 l6"><a class="flow-text" href="{% url 'signup' %}">Sign Up</a></div>
         </div>
       </div>
-      <li><a href="#" class="sidenav-close" id="main-nav-close">hi<i class="small material-icons white-text">close</i></a></li>
+      <li><a href="#" class="sidenav-close" id="main-nav-close"><i class="small material-icons white-text">close</i></a></li>
 
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large btn-floating large" id="main-nav-trig"><i class="material-icons">menu</i></a>
@@ -79,14 +78,10 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  <!-- <script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> -->
-
   <script>
     $(document).ready(function(){
       $('.sidenav').sidenav();
     });
-
   </script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </body>
