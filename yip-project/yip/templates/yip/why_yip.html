@@ -38,122 +38,22 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 <script>
   Vue.config.devtools = true;
 
-Vue.component('card', {
-template: `
-  <div class="card-wrap"
-    @mousemove="handleMouseMove"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
-    ref="card">
-    <div class="card"
-      :style="cardStyle">
-      <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
-      <div class="card-info">
-        <slot name="header"></slot>
-        <slot name="content"></slot>
-     <div class="tat responsive-img">
-         <div class="txt">
-             YOUNG INNOVATORS PROGRAMME
-         </div>
-         <div class="iitkgp">
-             IIT KHARAGPUR
-         </div>
-
-     </div>
-
-
-
-
-</div>
-  <div style="background-image: url('/static/Asset 1-100 (1).jpg');"> <!--Srijanakursnviretb-->
-<div class="yy">
-  <i class="fas fa-atom fa-4x text-primary mb-4"></i>
-    WHY YIP?
-</div>
-<!-- photo / grid -->
-<section class="container section" id="photo's">
-<div class="row" style="background-color: white; opacity: 0.8">
-<div class="col s12 l4">
-    <img src="/static/prom.jpg" class="responsive-img materialboxed">
-</div>
- <div class="col s12 l6  offset-l1">
-  <h2 class="indigo-text text-dargen-4">INNOVATION</h2>
-  <p>We majorly concentrate on promoting the culture of innovation among students
-      in more broarder domain for example science and technology.
-  </p>
- </div>
-</div>
-<div class="row" style="background-color: white; opacity: 0.8">
-  <div class="col s12 l4 push-l7 offset-l1">
-      <img src="/static/prom1.JPG" class="responsive-img materialboxed">
-  </div>
-   <div class="col s12 l6 pull-l4 right-align">
-    <h2 class="indigo-text text-dargen-4">CREATIVITY</h2>
-    <p>   Creativity is surely a game changer in this competitive world.YIP expects students to gain more creative approach in
-        various themes rather than a subjective one
-
-   </div>
-  </div>
-  <div class="row" style="background-color: white; opacity: 0.8">
-      <div class="col s12 l4">
-          <img src="/static/prom22.jpg" class="responsive-img materialboxed">
-      </div>
-       <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-dargen-4">PERSEVERANCE</h2>
-        <p> YIP is structured such a way that students are encouraged in four levels . This builds students confidence and perseverance
-            enormously.
-        </p>
-       </div>
-  </div>
-
-
-</section>
-</div>
-<!--Parallax-->
-<!--
-<div class="parallax-container">
- <div class="parallax">
-     <img src="/static/imm.jpg"alt="" class="responsive-img">
- </div>
-
-</div>
-<div class="campus">
-    VISITING IIT KHARAGPUR
-</div>
-<div class="container">
-
-  <div class="row">
-      <div class="col s12 l6">
-          <div class="card">
-          <div class="card-image">
-            <img src="/static/vg2.jpeg" alt="">
+  Vue.component('card', {
+    template: `
+      <div class="card-wrap"
+        @mousemove="handleMouseMove"
+        @mouseenter="handleMouseEnter"
+        @mouseleave="handleMouseLeave"
+        ref="card">
+        <div class="card"
+          :style="cardStyle">
+          <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+          <div class="card-info">
+            <slot name="header"></slot>
+            <slot name="content"></slot>
           </div>
-              <div class="card content">
-                  <sapn class="card-title">
-                      Visiting Campus
-                  </sapn>
-                  Students qualified for round 3-4 will get
-                  an amazing chance to visit our 2200 acre campus.
-              </div>
-          </div>
-      </div>
-
-
-      <div class="col s12 l6">
-          <div class="card">
-          <div class="card-image">
-            <img src="/static/lig.jpeg" alt="">
-          </div>
-              <div class="card content">
-                  <sapn class="card-title">
-                      Visiting Campus
-                  </sapn>
-
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>`,
+        </div>
+      </div>`,
 mounted() {
   this.width = this.$refs.card.offsetWidth;
   this.height = this.$refs.card.offsetHeight;
