@@ -48,6 +48,11 @@ cursor: pointer;
   right: 10px;
   height: 100px;
 }
+@media only screen and (max-width: 800px){
+  h1{
+    font-size: 3.5em;
+  }
+}
     </style>
   <div class="slider fullscreen">
     <a href="http://www.iitkgp.ac.in/"><img src="{% static 'kgplogo.png' %}" id="logo-kgp" class="responsive-img"></a>
@@ -95,9 +100,6 @@ cursor: pointer;
     $(document).ready(function(){
     $('.slider').slider();
   });
-    $(document).ready(function(){
-      $('.sidenav').sidenav();
-    });
 </script>
 <!-- ==========Write all your code above this point============ -->
 {% endblock %}
