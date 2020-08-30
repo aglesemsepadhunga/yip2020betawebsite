@@ -8,7 +8,7 @@
 	  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 		overflow: hidden;
 		}
-		h3{font-weight: 300;}
+		h3{font-weight: 350;}
 
 		form{
 			margin: 0 auto;
@@ -126,37 +126,53 @@
 		}
 
 		.full{height:100%;}
-
+		form a{color: white;}
+		form a:hover{
+			text-decoration: underline;
+		}
+		input{
+			opacity: 0.9;
+		}
+		input:hover, input:focus{
+			opacity: 1;
+			box-shadow: 0 0 8px #f4f4f4 !important;
+		}
+		@media only screen and (max-width: 800px) {
+  			.bg-bubbles {
+    			display: none;
+  			}
+}
 </style>
 <!-- ==========Write all your code below this point============ -->
-<div>
-	<ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-<div class="container valign-wrapper center-align full">
-	<form action="{% url 'login' %}">
+<ul class="bg-bubbles">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<div class="valign-wrapper center-align full">
+	<form action="{% url 'login' %}" method="POST">
+		{% csrf_token %}
 		<h3 class="white-text">Welcome</h3>
-		<h5 class="white-text">Young Innovators Program, 2020</h5>
+		<h5 class="white-text">Young Innovators Program</h5>
 	  <div class="row container">
 	    <div class="input-field col s12">
-	      <input placeholder="Username" type="text" class="white center-align teal-text text-accent-3">
+	      <input placeholder="Username" type="text" class="white center-align teal-text text-accent-3" name="username">
 	    </div>
 	    <div class="input-field col s12">
-	      <input placeholder="Password" type="password" class="white center-align teal-text text-accent-3">
+	      <input placeholder="Password" type="password" class="white center-align teal-text text-accent-3" name="password">
 	    </div>
 	  </div>
-		<input type="submit" name="submit" value="Log In" class="btn">
+	  	<p class="red-text">{% if error %}{{ error }}{% endif %}</p>
+		<input type="submit" name="submit" value="Log In" class="btn btn-primary">
+	  	<p class="white-text">Don't have an account? <a href="{% url 'signup' %}">Register Here</a> </p>
 	</form>
-</div>
 </div>
 
 <!-- ==========Write all your code above this point============ -->
