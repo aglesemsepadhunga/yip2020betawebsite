@@ -15,10 +15,10 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-<title>Previous_YIP</title>
+<title>Previous YIP</title>
 <style>
 .pre{
-
+  background-color: white;
   width:100%;
   height:100%;
 }
@@ -38,117 +38,312 @@ width:370px;
   position: absolute;
 
 }
-.testing{
-  top:20%;
-  left:20%;
+#hi{
+position: absolute;
+   top:21%;
+   left:7%;
+
 }
 .sc{
    color:black;
-   font-size: 50px;
+   font-size: 40px;
    position: absolute;
-   top:21%;
-   left:27%;
+   top:23%;
+   left:15%;
 
 }.ab{
   position: absolute;
   top:80%;
-  left:52%;
+  left:7%;
   color:yellow;
 }
 .par{
   color:black;
-   font-size: 45px;
+   font-size: 40px;
    position: absolute;
    top:81%;
-   left:60%;
+   left:15%;
+} /* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
 }.xs{
 float:right;
 font-size:40px;
 
-}.li{
-font-size:30px;
-}
-.lg{
-float:left;
-font-size:larger;
 }
 
-@media screen and (max-width:670px){
-   .txt{
-      color:yellow ;
-      font-size: 15px;
-   }
-   .carousel{
-height:400px;
-perspective: 500px;
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
 position: absolute;
-left:0%;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+.img{
+float:right;
+width:500px;
+height:500px;
+position: absolute;
 top:30%;
+left:50%;
 
-}.carousel .carousel-item{
-width:300px;
-}.material-icons{
-
-font-size:60px;
+}.dott{
+position:absolute;
+top:26%;
+left:65%;
+}
+#al{
 position: absolute;
-top:25%;
+top: 40%;
+left:7%;
+color:yellow;
 
+}
+.par1{
+position: absolute;
+top: 40%;
+left:15%;
+color:black;
+font-size: 40px;
 
-}.sc{
+}
+#al1{
+position: absolute;
+top: 60%;
+left:7%;
+color:yellow;
 
-   color:white;
-   font-size: 25px;
-   position: absolute;
-   top:26%;
-   left:41%;
+}
+.par2{
+position: absolute;
+top: 60%;
+left:15%;
+color:black;
+font-size: 40px;
+}
+@media screen and (max-width: 600px){
+#al{
+position: absolute;
+top: 40%;
+left:7%;
+color:yellow;
 
-
-}.par{
+}
+.par1{
+position: absolute;
+top: 45%;
+left:23%;
 color:white;
-   font-size: 25px;
+font-size: 15px;
+
+}
+#al1{
+position: absolute;
+top: 60%;
+left:7%;
+color:yellow;
+
+}
+.par2{
+position: absolute;
+top: 65%;
+left:24%;
+color:white;
+font-size: 20px;
+}
+#hi{
+position: absolute;
+   top:21%;
+   left:7%;
+   size:20px;
+
+}
+.sc{
+   color:white;
+   font-size: 20px;
    position: absolute;
-   top:81%;
-   left:60%;
-}.li{
+   top:27%;
+   left:23%;
 
+}.ab{
+  position: absolute;
+  top:80%;
+  left:7%;
+  color:yellow;
+}
+.par{
+  color:white;
+   font-size: 20px;
+   position: absolute;
+   top:85%;
+   left:20%;
 }
 
-
 }
-
 </style>
   <nav>
-      <div class="nav-wrapper teal lighten-1">
-        <a href="#" class="lg"></a>
-        <ul id="nav-mobile" class="xs">
-          <li><a href="/static/YIP'19_Coffee%20Table%20Book.pdf">YIP-2019</a></li>
-          <li><a href="/static/YIP'18_Coffee%20Table%20Book.pdf">YIP-2018</a></li>
-          <li><a href="/static/YIP'17_Coffee%20Table%20Book.pdf">YIP-2017</a></li>
+    <div class="nav-wrapper teal lighten-1">
+      <a href="#" class="lg"></a>
+      <ul id="nav-mobile" class="xs">
+        <li><a href="/static/YIP'19_Coffee%20Table%20Book.pdf">YIP-2019</a></li>
+        <li><a href="/static/YIP'18_Coffee%20Table%20Book.pdf">YIP-2018</a></li>
+        <li style="padding-right:80px"><a href="/static/YIP'17_Coffee%20Table%20Book.pdf">YIP-2017</a></li>
 
         </ul>
       </div>
     </nav>
-    <div style="background-image: url('/static/Asset 1-100.jpg');">
   <div class="pre">
 
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="/static/p1.jpeg"></a>
-    <a class="carousel-item" href="#two!"><img src="/static/p2.jpeg"></a>
-    <a class="carousel-item" href="#three!"><img src="/static/p3.jpeg"></a>
-    <a class="carousel-item" href="#four!"><img src="/static/p4.jpeg"></a>
-    <a class="carousel-item" href="#five!"><img src="/static/p5.jpeg"></a>
-    <a class="carousel-item" href="#six!"><img src="/static/p6.jpeg"></a>
-    <a class="carousel-item" href="#seven!"><img src="/static/p7.jpeg"></a>
-    <a class="carousel-item" href="#eight!"><img src="/static/p8.jpg"></a>
-    <a class="carousel-item" href="#nine!"><img src="/static/p9.jpeg"></a>
-    <a class="carousel-item" href="#ten!"><img src="/static/p10.jpeg"></a>
-    <a class="carousel-item" href="#eleven!"><img src="/static/p11.jpeg"></a>
-    <a class="carousel-item" href="#twelve!"><img src="/static/p12.jpeg"></a>
-    </div>
-    <i class="material-icons testing yellow-text">account_balance</i>
-    <div class="sc">1200+ SCHOOLS</div>
-    <div class="ab"><i class="material-icons">group</i></div>
-    <div class="par">2400+ PARTICIPANTS</div>
+
+
+ <div class="img">
+
+ <div class="slideshow-container">
+
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">1 / 10</div>-->
+  <img src="/static/p1.jpeg" style="width:100%">
+<!--  <div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">2 / 10</div>-->
+  <img src="/static/p2.jpeg" style="width:100%">
+<!--  <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade">
+<!--  <div class="numbertext">3 / 10</div>-->
+  <img src="/static/p3.jpeg" style="width:100%">
+<!--  <div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <!--<div class="numbertext">4 / 10</div>-->
+  <img src="/static/p4.jpeg" style="width:100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+<!--<div class="mySlides fade">
+  <div class="numbertext">5 / 10/div>
+  <img src="/static/p5.jpeg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>-->
+
+
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</div>
+</div>
+<br>
+    <i id="hi"class="material-icons teal-text text-lighten-1 responsive">account_balance</i>
+    <div class="sc">1200+ Schools</div>
+    <div class="ab"><i class="material-icons teal-text text-lighten-1 responsive">person</i></div>
+    <div class="par">2400+ Participants</div>
+    <i id = "al"class="large material-icons teal-text text-lighten-1 responsive">alarm</i>
+    <div class="par1">3000+ Hours of Innovation</div>
+    <i id = "al1"class="large material-icons teal-text text-lighten-1 responsive">group</i>
+    <div class="par2"> 32 Teams</div>
+
+
+
+<div class="dott">
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<!--<span class="dot" onclick="currentSlide(5)"></span>-->
+
+</div>
+</div>
+
+
 
 
 </div>
@@ -160,8 +355,35 @@ color:white;
  $(document).ready(function(){
   $('.carousel').carousel();
 });
-</script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
 
 
 
