@@ -73,7 +73,7 @@ h1 + p, p + p {
   position: relative;
   -webkit-box-flex: 0;
           flex: 0 0 240px;
-  width: 280px;
+  width: 260px;
   height: 420px;
   background-color: #333;
   overflow: hidden;
