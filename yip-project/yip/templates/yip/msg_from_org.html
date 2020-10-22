@@ -7,53 +7,66 @@ Try to write all the code as neat and descriptive as possible with proper indent
 Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
 <!-- ==========Write all your code below this point============ -->
 
-
-<style>
-  .caption{
-    background-color: rgba(0,0,0,0.8);
-    padding: 20px;
-  }
-  p{
-    	font-size: 1.2em;
-    }
-</style>
-  <div class="slider fullscreen">
-    <ul class="slides">
-      <li>
-        <img src="{% static 'BB.JPG' %}"> <!-- random image -->
-        <div class="caption center-align">
-          <h4>Prof Baidurya Bhattacharya</h4>
-          <h5 class="light grey-text text-lighten-3">Dean of IR, IIT KGP</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </li>
-      <li>
-        <img src="{% static 'ppc.jpg' %}"> <!-- random image -->
-        <div class="caption left-align">
-          <h4>Prof Partha Pratim Chakrabarti </h4>
-          <h5 class="light grey-text text-lighten-3">Former Director, IIT-KGP(2013-2019)</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </li>
-      <li>
-        <img src="{% static 'homepic2.jpg' %}"> <!-- random image -->
-        <div class="caption center-align">
-          <h4>Valley School, Raipur</h4>
-          <h5 class="light grey-text text-lighten-3">Neelam Dwivedi, Teacher</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        </div>
-      </li>
-    </ul>
-  </div>
-<script>
-    $(document).ready(function(){
-    $('.slider').slider();
-  });
-</script>
-
-
-
+<div class="container valign-wrapper" style="height: 100%;">
+<div class="row">
+	<div class="col s12 m4">
+  		<div class="card">
+    		<div class="card-image waves-effect waves-block waves-light">
+      			<img class="activator" src="{% static 'ppc.jpg' %}">
+    		</div>
+    		<div class="card-content">
+      			<span class="card-title activator grey-text text-darken-4">Professor Partha Pratim Chakraborty
+<!--       			<i class="material-icons right">more_vert</i>
+ -->      			</span>
+      			<p>Former Director, IIT Kharagpur</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur....</p>
+    		</div>
+    		<div class="card-reveal">
+      			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    		</div>
+  		</div>
+  	</div>
+	<div class="col s12 m4">
+  		<div class="card">
+    		<div class="card-image waves-effect waves-block waves-light">
+      			<img class="activator" src="{% static 'ppc.jpg' %}">
+    		</div>
+    		<div class="card-content">
+      			<span class="card-title activator grey-text text-darken-4">Professor Partha Pratim Chakraborty
+<!--       			<i class="material-icons right">more_vert</i>
+ -->      			</span>
+      			<p>Former Director, IIT Kharagpur</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur....</p>
+    		</div>
+    		<div class="card-reveal">
+      			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    		</div>
+  		</div>
+  	</div>
+	<div class="col s12 m4">
+  		<div class="card">
+    		<div class="card-image waves-effect waves-block waves-light">
+      			<img class="activator" src="{% static 'ppc.jpg' %}">
+    		</div>
+    		<div class="card-content">
+      			<span class="card-title activator grey-text text-darken-4">Professor Partha Pratim Chakraborty
+<!--       			<i class="material-icons right">more_vert</i>
+ -->      			</span>
+      			<p>Former Director, IIT Kharagpur</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur....</p>
+    		</div>
+    		<div class="card-reveal">
+      			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    		</div>
+  		</div>
+  	</div>
+</div>
+</div>
 <!-- ==========Write all your code above this point============ -->
 {% endblock %}

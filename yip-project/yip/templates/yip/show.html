@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>DATABASE (TEAM DETAILS)</h2>
+
+<table>
+  <tr>
+    <th>USER</th>
+    <th>TEAM NAME</th>
+    <th>SCHOOL</th>
+    <th>PS</th>
+    <th>Mentor name</th>
+    <th>Mentor email</th>
+    <th>Mentor phone</th>
+    <th>No. of students</th>
+    <th>s1 name</th>
+    <th>s1 email</th>
+    <th>s1 phone</th>
+    <th>s1 class</th>
+    <th>s1 dob</th>
+    <th>s1 gender</th>
+    <th>s2 name</th>
+    <th>s2 email</th>
+    <th>s2 phone</th>
+    <th>s2 class</th>
+    <th>s2 dob</th>
+    <th>s2 gender</th>
+    <th>s3 name</th>
+    <th>s3 email</th>
+    <th>s3 phone</th>
+    <th>s3 class</th>
+    <th>s3 dob</th>
+    <th>s3 gender</th>
+  </tr>
+{% for d in all_objects %}
+  <tr>
+    <td>{{ d.user }}</td>
+    <td>{{ d.team_name }}</td>
+    <td>{{ d.school }}</td>
+    <td>{{ d.ps }}</td>
+    <td>{{ d.teacher_name }}</td>
+    <td>{{ d.teacher_email }}</td>
+    <td>{{ d.teacher_phone_num }}</td>
+    <td>{{ d.num_of_students }}</td>
+    <td>{{ d.s1_name }}</td>
+    <td>{{ d.s1_email }}</td>
+    <td>{{ d.s1_phone_num }}</td>
+    <td>{{ d.s1_class }}</td>
+    <td>{{ d.s1_dob }}</td>
+    <td>{{ d.s1_gender }}</td>
+    <td>{{ d.s2_name }}</td>
+    <td>{{ d.s2_email }}</td>
+    <td>{{ d.s2_phone_num }}</td>
+    <td>{{ d.s2_class }}</td>
+    <td>{{ d.s2_dob }}</td>
+    <td>{{ d.s2_gender }}</td>
+    <td>{{ d.s3_name }}</td>
+    <td>{{ d.s3_email }}</td>
+    <td>{{ d.s3_phone_num }}</td>
+    <td>{{ d.s3_class }}</td>
+    <td>{{ d.s3_dob }}</td>
+    <td>{{ d.s3_gender }}</td>
+
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
