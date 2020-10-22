@@ -1,46 +1,1512 @@
-{% extends 'yip/base.html' %}
+<!DOCTYPE html>
+  <head>
+    <title>GALLERY</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!--
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block content %}
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/templatemo_misc.css">
+    <link href="/static/css/templatemo_style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
 
-<!-- This is the Gallery section of the website.
-Try to write all the code as neat and descriptive as possible with proper indentations as others will also have to work on the same code, so the code must be human-readable and not just machine readable.
-Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
-<!-- ==========Write all your code below this point============ -->
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+	<script src="/static/js/jquery.lightbox.js"></script>
+	<script src="/static/js/templatemo_custom.js"></script>
+    <script>
+    function showhide()
+    {
+    	var div = document.getElementById("newpost");
+		if (div.style.display !== "none")
+		{
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
+    }
+  </script>
+  <style>
+    html, body {
+    	font-family: Tahoma, Arial;
+    	padding: 0px;
+    	margin: 0px;
+    	color: #e7e7e7;
+    	background: white;
+    	font-size: 12px;
+    }
 
-{% load staticfiles %}
-  <link rel="stylesheet" href="{% static 'gallery.css' %}">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
-     <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
-    <div id="container">
-      <div id="toggleContainer">
-        <h1 style="color:blue">Gallery</h1>
-      <!--   <label>Carousel</label> -->
-         <div id="toggle">
-           <div id="outer3">
-              <div id="slider3"></div>
-           </div>
-    <!--       <label>Tiles</label> -->
+    .blue {
+    	color: #0CF;
+    }
+
+    .green {
+    	color: #0F0;
+    }
+
+    a {
+    	color: #b69e40; outline: 0;
+    }
+
+    a:hover {
+    	text-decoration: none;
+    }
+
+    a:active, a:focus {
+    	color: #b69e40;
+    	border: none;
+    	text-decoration: none;
+    }
+
+    button:focus { border: none; outline:none; }
+
+    p {
+    	color: #aeb5ba;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    	font-family: Tahoma, Arial;
+    	font-weight: 400;
+    }
+
+    h1	{	font-size: 1.5em;
+    	color: #ffffff;
+    	background: #343537;
+    	padding: 10px 8px;
+    	float: left;
+    	}
+
+    h2	{ font-size: 24px; color: #ffffff; }
+    h3 {  text-align: center; font-size: 16px; }
+    /*ag {
+      	max-width: 100%;
+      	height: auto;
+      	width:100%;
+    }*/
+    .clear	{ clear: both; }
+    .container-fluid{ margin:15px auto; }
+
+    /* Menu */
+    span.fa	{ width: 100%; text-align: center; }
+    .site-header .main-navigation ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      float: right;
+    }
+
+    .site-header .main-navigation {
+      display: block;
+      text-align: center;
+      padding: 0px 0px;
+    }
+    .site-header .main-navigation ul li {
+      display: inline-block;
+      margin-left: 1px;
+    }
+    .site-header .main-navigation ul li:last-child {
+      margin-right: 0px !important;
+    }
+    .site-header .main-navigation ul li a {
+      padding: 20px 20px;
+      display: inline-block;
+      color: white;
+      font-size: 16px;
+      background: #343536;
+      text-transform: uppercase;
+    }
+    .site-header .main-navigation ul li a.active {
+      color: #b69e40;
+      text-decoration: none;
+    }
+    .site-header .templatemo_logo {
+      margin-top: 60px;
+      display: inline-block;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    a.menu-toggle-btn {
+      padding: 12px 0;
+      display: block;
+      color: white;
+      font-size: 24px;
+    }
+
+    .responsive-menu {
+      display: none;
+      background: #343536;
+    }
+
+    .responsive_menu {
+      display: none;
+      background-color: #2a2a2a;
+    }
+    .responsive_menu ul li {
+      display: block !important;
+      margin: 0 !important;
+      border-bottom: 1px solid #444444;
+    }
+    .responsive_menu ul li a {
+      padding: 15px 0 !important;
+      display: block !important;
+    }
+
+    .templatemorow	{ margin: 0px 30px; }
+    .templatemo_servicerow	{ margin: 0px; }
+    .blok	{ position: absolute; }
+    .hex	{ width: 20%; float: left; }
+    .hex-offset	{ margin-left: 10%; }
+    .hexagon2, .hexagonteam {
+    	position: absolute;
+    	width: 200px;
+    	height: 400px;
+    	top: -85px;
+    }
+    .hexagonteam {
+    	position: absolute;
+    	width: 200px;
+    	height: 350px;
+    	top: -85px;
+    }
+    .hexagon {
+    	overflow: hidden;
+    	visibility: hidden;
+
+    	-webkit-transform: rotate(120deg);
+    	-moz-transform: rotate(120deg);
+    	-o-transform: rotate(120deg);
+    	-ms-transform: rotate(120deg);
+    	transform: rotate(120deg);
+    	cursor: pointer;
+    }
+
+    .hexagon-in1 {
+    	overflow: hidden;
+    	width: 100%;
+    	height: 100%;
+
+    	-webkit-transform: rotate(-60deg);
+    	-moz-transform: rotate(-60deg);
+    	-o-transform: rotate(-60deg);
+    	-ms-transform: rotate(-60deg);
+    	transform: rotate(-60deg);
+    }
+
+    .hexagon-in2 {
+    	/*-webkit-box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
+    	box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);*/
+    	overflow: hidden;
+    	width: 100%;
+    	height: 100%;
+    	background-repeat: no-repeat;
+    	background-position: 50%;
+
+    	-webkit-background-size: 125%;
+    	-moz-background-size: 125%;
+    	background-size: 125%;
+    	visibility: visible;
+
+    	-webkit-transform: rotate(-60deg);
+    	-moz-transform: rotate(-60deg);
+    	-o-transform: rotate(-60deg);
+    	-ms-transform: rotate(-60deg);
+    	transform: rotate(-60deg);
+
+    	-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+    	-ms-transition: all 0.5s ease;
+    	transition: all 0.5s ease;
+    }
+
+    .hexagon-in2:hover {
+    	webkit-box-shadow: inset 0 0 0 200px rgba(36,36,36, 0.7);
+    	box-shadow: inset 0 0 0 200px rgba(36,36,36, 0.7);
+    }
+    .s_top	{ margin-top: 8%; }
+
+    .templatemo_hexteam .gallery-item .templatemo_overlay1 a {
+        margin-top: 78%;
+        background: none;
+        border: none;
+        position: static;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .smallhexagon {
+    	width: 40px;
+    	height: 46px;
+    	background: #b69e40;
+    	position: relative;
+    	background: url(../static/templatemo_teamhexa.png) no-repeat;
+    	margin-bottom: 10px;
+    }
+    .smallhexagon:before {
+    	position: absolute;
+    	left: 0;
+    	width: 0;
+    	height: 46px;
+
+    }
+    .smallhexagon:after {
+    	content: "";
+    	position: absolute;
+    	left: 0;
+    	width: 0;
+    	height: 46px;
+    }
+    .smallhexagon .fa { font-size: 16px; color: #ffffff; line-height: 46px; }
+    .templatemo_overlaytxt	{ margin-top: 105%; text-align: center; width: 100%; }
+
+    .hexagon-a {
+    	margin-top: 63px;
+    	position: absolute;
+    	z-index: 300;
+    	margin-left: -65px;
+    }
+    .hexagon-a a {
+      margin: 0 auto;
+      width: 26%;
+      display: block;
+      position: relative;
+
+    }
+    .hexagon-a a.hlinktop:hover .hexa-a {
+      background: #cfb652;
+      color: #fff;
+    }
+
+    .hexagonservices {
+    	height: 160px;
+    	margin-top: 60px;
+    }
+    .hexagonservices a.hlinkbott {
+      margin: 0 auto;
+      display: block;
+      min-width: 120px;
+      position: relative;
+    }
+
+    .hexagonservices a.hlinkbott:hover .hexa {
+      background: #b69e40;
+    }
+    .templatemo_servicetext	{ float: left; margin-top: 230px; }
+    .templatemo_hexservices	{ width: 20%; margin-top: -10%; }
+    .templatemo_hexservices p{ text-align: center; }
+
+    /* mid hexa */
+    .hexa-a {
+      width: 100%;
+      min-width: 110px;
+      height: 0;
+      padding-bottom: 57.7%;
+      background: #393e42;
+      position: absolute;
+      color: #b69e40;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      font-size: 42px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -webkit-transition-delay: 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+      border-radius: 0%;
+    }
+
+    .hexa-a:before, .hexa-a:after {
+      content: "";
+      display: block;
+      width: inherit;
+      height: inherit;
+      padding: inherit;
+      background: inherit;
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg);
+      z-index: 0;
+      position: absolute;
+      border-radius: inherit;
+    }
+
+    .hexa-a:after {
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg);
+    }
+
+    .hcontainer-a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .vertical-align-a {
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+
+    .texts-a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    /* main Hexa */
+    .hexa {
+      width: 100%;
+      min-width: 120px;
+      height: 0;
+      padding-bottom: 57.7%;
+      margin: 0;
+      background: #b69e40;
+      position: absolute;
+      color: #FFF;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      font-size: 14px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -webkit-transition-delay: 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+      border-radius: 0%;
+    }
+
+    .hexa:before, .hexa:after {
+      content: "";
+      display: block;
+      width: inherit;
+      height: inherit;
+      padding: inherit;
+      background: inherit;
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -o-transform: rotate(60deg);
+      transform: rotate(60deg);
+      z-index: 0;
+      position: absolute;
+      border-radius: inherit;
+    }
+
+    .hexa:after {
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg);
+    }
+
+
+    /* ---- Small Hexa ----*/
+    .hex_footer {
+        width: 46px;
+    	height: 40px;
+    	position: relative;
+        background: url(../static/templatemo_footerhexa.png) no-repeat;
+    }
+
+     a:hover .hex_footer{ background: url(../static/templatemo_teamhexa_hover.png) no-repeat; }
+
+    .hex_footer span.fa{ color: #ffffff; font-size: 16px; line-height: 40px; }
+
+    /*------------------------------------------------------
+    	Gallery Styles
+    --------------------------------------------------------*/
+    .gallery-item {
+      background-color: white;
+      -webkit-box-shadow: inset 0 0 1px #666;
+      -moz-box-shadow: inset 0 0 1px #666;
+      margin-bottom: 30px;
+      /*position: relative;*/
+      overflow: hidden;
+    }
+    .gallery-item .content-gallery {
+      text-align: center;
+    }
+    .gallery-item .content-gallery h3 {
+      color: #b10021;
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+    .gallery-item img {
+      width: 100%;
+    }
+    .gallery-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      height: 100%;
+      display: block;
+      -webkit-transition: all 50ms ease-in-out;
+      -moz-transition: all 50ms ease-in-out;
+      -ms-transition: all 50ms ease-in-out;
+      -o-transition: all 50ms ease-in-out;
+      transition: all 50ms ease-in-out;
+    }
+    .gallery-item .overlay a {
+      color: #2a2a2a;
+      width: 32px;
+      height: 32px;
+      background-color: #d3b850;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 32px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -16px;
+      margin-left: -16px;
+    }
+    .templatemo_gallerygap { margin-bottom: 13%; }
+    .templatemo_gallerygap img{ margin-top: 30px; }
+    .templatemo_gallerygap span.fa	{ font-size: 22px; margin-bottom: 15px; }
+    .templatemo_gallerytop	{ margin-top: 11%; }
+    .templatemo_loadmore	{
+    	margin: 0 auto;
+    	padding: 7px 0px;
+    	background: #b79e41;
+    	margin-top: 15%;
+    	text-align: center;
+    	font-size: 16px;
+    	width: 200px;
+    	margin-bottom:10%;
+    	}
+
+    .templatemo_loadmore button{
+    	border: none;
+    	background: #b79e41;
+    	color: #ffffff;
+    	text-transform: uppercase;
+    	width: 100%;
+    	}
+    .templatemo_contacttitle	{
+    	font-size: 16px;
+    	color: #ffffff; }
+    .templatemo_contactmap	{
+    	width: 332px;
+    	height: 388px;
+    	margin: 0 auto; }
+
+
+    .templatemo_contactmap img{
+    	position: absolute;
+    	top: 0px;
+    	left: 29px;
+    	}
+    .templatemo_address	ul{
+    	float: left;
+    	width: 100%;
+    	padding: 0;
+    	margin-top: 20px;
+    	}
+    .templatemo_address	ul li{ list-style: none; display: inline; padding: 0px; float: left; }
+    .templatemo_address	ul li.left{
+    	float: left;
+    	width: 40px;
+    	color: #b69e40;
+    	font-size: 22px;
+    }
+    .templatemo_address	ul li.rigth{
+    	float: left;
+    }
+
+    .templatemo_address	ul li.clear	{ height: 10px; width: 100%; }
+
+    .templatemo_form	{  width: 100%; }
+    .templatemo_form input{
+    	float: left;
+    	height: 34px;
+    	padding: 6px 12px;
+    	border-radius: 0px;
+    	background: #343536;
+    	border: 1px solid #4b5257;
+    	width: 100%;
+    	margin-top: 10px;
+    	color: #cccccc;
+    	}
+    .templatemo_form textarea{
+    	float: left;
+    	padding: 6px 12px;
+    	height: 130px;
+    	border-radius: 0px;
+    	background: #343536;
+    	border: 1px solid #4b5257;
+    	margin-top: 10px;
+    	color: #cccccc;
+    }
+    .templatemo_form button.btn-primary{
+    	float: left;
+    	width: 100%;
+    	line-height: 34px;
+    	text-align: center;
+    	color: #ffffff;
+    	border-radius: 0px;
+    	background: #b69e40;
+    	border: none;
+    	text-transform: uppercase;
+    	font-size: 14px;
+    	font-weight: 600;
+    	margin-top: 10px;
+    }
+    .templatemo_contactmap	{ width: 332px; height: 388px; float: left; }
+    .templatemo_contactmap img { position: absolute; width: 332px; height: 388px; top: 0px; left: 15px; }
+    #templatemo_map {
+        width: 100%;
+        height: 388px;
+    }
+
+    .templatemo_footer { background: #343536; padding: 20px 0px; width: 100%; margin-top: 100px; }
+    .templatemo_footer .hex_footer	{ float: left; margin-right: 5px; height: 40px; }
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-width : 419px)	{
+    	.hex	{ width: 50%; float: left; }
+    	.templatemorow	{ margin: 0 5%; }
+    	.hexagon2
+    	{
+    	position: absolute;
+    	width: 110px;
+    	height: 128px;
+    	top: 0px;
+    	}
+    	.templatemo-hex-top1	{ margin-top: 300px; }
+    	.templatemo-hex-top2	{ margin-top: 100px; margin-left: 25%; }
+    	.templatemo-hex-top3	{ margin-top: 100px; }
+    	.templatemo_gallerytop	{ margin-top: 32%; }
+    	.templatemo_loadmore	{ margin-top: 53%; }
+    	.templatemo_servicetxt	{ margin-top: 230px; }
+    	.templatemo_servicecol2	{ margin-top: 10%; float: left; }
+    	.templatemo_contactmap	{ width: 250px; height: 292px; float: left; }
+    	.templatemo_contactmap img{ position: absolute; width: 250px; height: 292px; top: 0px; left: 15px; }
+    	#templatemo_map {
+        width: 100%;
+        height: 292px;
+    	}
+    	.blok	{ left: 13%; }
+    }
+
+    @media (min-width : 420px)
+    and (max-width : 559px)	{
+    	.hex	{ width: 50%; float: left; }
+    	.templatemorow	{ margin: 0; }
+    	.hexagon2
+    	{
+    	position: absolute;
+    	width: 150px;
+    	height: 175px;
+    	top: 0px;
+    	}
+    	.templatemo-hex-top1	{ margin-top: 300px; }
+    	.templatemo-hex-top2	{ margin-top: 130px; margin-left: 25%; }
+    	.templatemo-hex-top3		{ margin-top: 130px; }
+    	.templatemo_gallerytop	{ margin-top: 32%; }
+    	.templatemo_loadmore	{ margin-top: 50%; }
+    	.templatemo_servicetxt	{ margin-top: 230px; }
+    	.templatemo_servicecol2	{ margin-top: 7%; float: left; }
+    	.blok	{ left: 22%; }
+
+    }
+
+    @media(min-width:560px) and (max-width:767px)	{
+    	.hex	{ width: 50%; float: left; }
+    	.templatemorow	{ margin: 0 10%; }
+    	.hexagon2
+    	{
+    	position: absolute;
+    	width: 200px;
+    	height: 250px;
+    	top: 0px;
+    	}
+    	.templatemo-hex-top1	{ margin-top: 300px; }
+    	.templatemo-hex-top2	{ margin-top: 180px; margin-left: 25%; }
+    	.templatemo-hex-top3		{ margin-top: 180px; }
+    	.templatemo_gallerytop	{ margin-top: 33%; }
+    	.templatemo_loadmore	{ margin-top: 48%; }
+    	.templatemo_servicetxt	{ margin-top: 230px; }
+    	.templatemo_servicecol2	{ margin-top: 7%; float: left; }
+    	.blok	{ left: 33%; }
+
+    }
+    @media (max-width: 767px)	{
+    	.templatemo_footer .hex_footer	{ float: left; }
+    	.hexagon-a	{ margin-left: 5px; }
+    	.hexagon-a a	{ min-width: 190px; }
+    	.hexagonservices a.hlinkbott	{ width: 200px; }
+    	.templatemo_servicerow	{margin: -10% 30px 0px 30px; }
+    	.templatemo_hexservices	{ width: 100%; margin-top: 5%; float: left; }
+
+    }
+    @media(min-width:768px) and (max-width: 991px){
+    	.templatemorow	{ margin: 0 4%; }
+    	.hexagon2
+    	{
+    	position: absolute;
+    	width: 120px;
+    	height: 180px;
+    	top: -85px;
+    	}
+    	.templatemo-hex-top1	{ margin-top: 110px; }
+    	.templatemo_servicecol2	{ margin-top: 15%; float: left; }
+    	.s_top	{ margin-top: 14%; }
+    	.hexagon-a	{ margin-left: 5px; }
+    	.hexagon-a a	{ min-width: 190px; }
+    	.hexagonservices a.hlinkbott	{ width: 200px; }
+    	.templatemo_servicerow	{ margin: -10% 30px 0px 30px; }
+    	.templatemo_hexservices	{ width: 100%; margin-top: 5%; }
+    	.blok	{ left: 33%; }
+
+    	}
+    @media(min-width:768px) and (max-width: 860px){
+    	.templatemo_gallerytop	{ margin-top: 15%; }
+    }
+    @media(min-width:861px) and (max-width: 991px){
+    	.templatemo_gallerytop	{ margin-top: 14%; }
+    }
+    @media(min-width:992px){
+    	.templatemorow	{ margin: 0 7%; }
+    	.hexagon2
+    	{
+    	position: absolute;
+    	width: 150px;
+    	height: 250px;
+    	top: -85px;
+    	}
+    	.templatemo-hex-top1	{ margin-top: 140px; }
+
+    }
+    @media(min-width:992px) and (max-width: 1200px){
+    	.hexagon-a	{ margin-left: 5px; }
+    	.hexagon-a a	{ min-width: 140px; }
+    	.hexagonservices a.hlinkbott	{ width: 150px; }
+    	.templatemo_servicerow	{ margin: 0px 30px; }
+    	.templatemo_contactmap	{ width: 250px; height: 292px; float: left; }
+    	.templatemo_contactmap img{ position: absolute; width: 250px; height: 292px; top: 0px; left: 15px; }
+    	#templatemo_map {
+       	 width: 100%;
+        height: 292px;
+    	}
+    	}
+    @media(min-width:992px) and (max-width: 1390px){
+    	.templatemo_gallerytop	{ margin-top: 15%; }
+    	}
+    @media(min-width:1400px) and (max-width:1600px)	{
+     	.templatemo_gallerytop	{ margin-top: 14%; }
+     }
+
+    @media(min-width:1200px){
+    	.templatemorow	{ margin: 0px 30px; }
+    	.hexagon2 {
+    	position: absolute;
+    	width: 200px;
+    	height: 250px;
+    	top: -85px;
+    }
+    	.templatemo-hex-top1	{ margin-top: 180px; }
+    	.hexagon-a	{ left: 35%; }
+    	.hexagon-a a	{ min-width: 190px; }
+    	.hexagonservices a.hlinkbott	{ width: 200px; }
+    	.templatemo_servicerow	{ margin: 30px 30px; }
+    }
+
+    @media only screen and (max-width: 1000px) {
+    	.site-header .main-navigation ul {
+     	 padding: 0;
+     	 margin: 0;
+      	list-style: none;
+      	float: none;
+    	}
+
+      .site-header .main-navigation {
+        padding: 0;
+      }
+      .site-header .main-navigation .container {
+        width: 100%;
+      }
+
+      .responsive-menu {
+        display: block;
+      }
+
+      .main_menu {
+        display: none;
+      }
+
+      .services #icons .icon-item span,
+      .about #icons-about .icon-item span {
+        display: none;
+      }
+      }
+
+     @media	(max-width: 991px) {
+    	.templatemo_footer div.col-sm-12{ float: left; margin-top: 10px; width: 100%; }
+
+     }
+    .content { display: none; height: auto; }
+    .homepage	{ display: block; }
+    .leftalign	{ float: left; }
+    #logox{
+position: fixed;
+top: 20px;
+right: 20px;
+height: 100px;
+transition: 1s;
+z-index: 6;
+}
+#logox:hover{
+top: 10px;
+right: 10px;
+height: 120px;
+}
+</style>
+    <a href="/" title="Young Innovators Program"><img src="/static/logo.png" id="logox" class="responsive-img" id="logo-barc"></a>
+  	<div class="site-header">
+		<div class="main-navigation">
+	<!--		<div class="responsive_menu">
+				<ul>
+					<li><a class="show-1 templatemo_home" href="#">Gallery</a></li>
+					<li><a class="show-2 templatemo_page2" href="#">Our team</a></li>
+					<li><a class="show-3 templatemo_page3" href="#">Services</a></li>
+					<li><a class="show-5 templatemo_page5" href="#">Contact</a></li>
+				</ul>
+			</div>-->
+			<div class="container">
+				<div class="row templatemo_gallerygap">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div>
+          <h2 style="font-size:50px; color: black">GALLERY</h2>
+                    <!--<div class="col-md-3 col-sm-12">
+                    	<a href="#"><img src="static/templatemo_logo.jpg" alt="Polygon HTML5 Template"></a>
+                    </div>-->
+			<!--		<div class="col-md-9 main_menu">
+						<ul>
+							<li><a class="show-1 templatemo_home" href="#">
+                            	<span class="fa fa-camera"></span>
+                                Gallery</a></li>
+							<li><a class="show-2 templatemo_page2" href="#">
+                            	<span class="fa fa-users"></span>
+                          		  Our team</a></li>
+							<li><a class="show-3 templatemo_page3" href="#">
+                            	<span class="fa fa-cogs"></span>
+                            	Services</a></li>
+							<li><a class="show-5 templatemo_page5" href="#">
+                            	<span class="fa fa-envelope"></span>
+                                Contact</a></li>
+						</ul>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="menu-container">
+    <!-- gallery start -->
+    <div class="content homepage" id="menu-1">
+    <div class="container">
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/101.jpg);">
+             	 	<div class="overlay">
+						<a href="/static/101.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="galleryView">
-        <div id="galleryContainer">
-           <div id="leftView"></div>
-           <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
-           <a id="linkTag">
-              <div id="mainView"></div>
-           </a>
-           <div id="rightView"></div>
-           <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
-        </div>
-      </div>
-      <div id="tilesView">
-        <div id="tilesContainer"></div>
-      </div>
     </div>
-      <script  src="{% static 'gallery.js' %}"></script>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/102.jpg);">
+              	<div class="overlay">
+						<a href="/static/102.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/103.jpg);">
+              	<div class="overlay">
+						<a href="/static/103.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/104.jpg);">
+              	<div class="overlay">
+						<a href="/static/104.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/105.jpg);">
+              		<div class="overlay">
+						<a href="/static/105.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/106.jpg);">
+              		<div class="overlay">
+						<a href="/static/106.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/107.jpg);">
+              		<div class="overlay">
+						<a href="/static/107.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/108.jpg);">
+              		<div class="overlay">
+						<a href="/static/108.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/109.jpg);">
+              		<div class="overlay">
+						<a href="/static/109.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+	</div>
+    <div  id="newpost" style="display:none;" class="container answer_list templatemo_gallerytop">
+	    <div class="row templatemorow">
+    		<div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/110.jpg);">
+             	 	<div class="overlay">
+						<a href="/static/110.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/111.jpg);">
+              	<div class="overlay">
+						<a href="/static/111.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/112.jpg);">
+              	<div class="overlay">
+						<a href="/static/112.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/113.jpg);">
+              	<div class="overlay">
+						<a href="/static/113.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hex col-sm-6  templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/114.jpg);">
+              		<div class="overlay">
+						<a href="/static/114.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  	     <div class="hex col-sm-6 hex-offset templatemo-hex-top1 templatemo-hex-top2">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/115.jpg);">
+              		<div class="overlay">
+						<a href="/static/115.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+     <div class="hex col-sm-6 templatemo-hex-top1 templatemo-hex-top3">
+    	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/116.jpg);">
+              		<div class="overlay">
+						<a href="/static/116.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top3">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/117.jpg);">
+              		<div class="overlay">
+						<a href="/static/117.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hex col-sm-6 templatemo-hex-top1  templatemo-hex-top2">
+      	<div>
+          <div class="hexagon hexagon2 gallery-item">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url(/static/118.jpg);">
+              		<div class="overlay">
+						<a href="/static/118.jpg" data-rel="lightbox" class="fa fa-expand"></a>
+					</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    	</div>
+	</div>
+    <div class="container">
+    	<div class="row">
+        	<div class="templatemo_loadmore">
+			 <button class="gallery_more" id="button" onClick="showhide()">Load More</button>
+            </div>
+        </div>
+    </div>
+    </div>
+      <!-- gallery end -->
+    <!-- team start -->
+    <div class="content team" id="menu-2">
+     <div class="templatemo_ourteam">
+     		<div class="container templatemo_hexteam">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(static/team/1.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="#fb">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-facebook"></span>
+                                 	  </div>
+                                    </a>
 
+                                    <a href="#tw">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
 
+                                    <a href="#ln">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-linkedin"></span>
+                                    </div>
+                                    </a>
 
+                                    <a href="#rs">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-rss"></span>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Phasellus interdum</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                    	<h2>Free Template</h2>
+                        <p>Polygon is free HTML5 template by <span class="blue">template</span><span class="green">mo</span> that can be used for any purpose. You can remove any credit link. Please tell your friends about our website. Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for static used in this template. Feel free to visit <a href="https://fb.com/templatemo" target="_parent">templatemo page</a> on Facebook.</p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    <div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(static/team/2.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="#fb">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-facebook"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="#tw">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#ln">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-linkedin"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#rs">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-rss"></span>
+                                    </div>
+                                    </a>
+                                </div>
 
-<!-- ==========Write all your code above this point============ -->
-{% endblock %}
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Cras interdum accumsan diam</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                    	<h2>Responsive Design</h2>
+                        <p>Please take a look at <a rel="nofollow" href="https://www.toocss.com">Too CSS</a> to see the collection of free website templates for you. This is free CSS website template fully compatible with tablets and mobile phones. Mauris eget neque at sapien faucibus egestas vel vitae mi. Maecenas commodo augue risus, sed placerat neque feugiat vel.</p>
+                    </div>
+                    </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="container templatemo_hexteam s_top">
+            	<div class="row">
+                	<div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(static/team/3.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="#fb">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-facebook"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="#tw">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#ln">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-linkedin"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#rs">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-rss"></span>
+                                    </div>
+                                    </a>
+                                </div>
+
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Morbi pulvinar</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt" >
+                    	<h2>Mobile Ready</h2>
+                        <p>Sed laoreet, enim quis euismod egestas, risus tortor tincidunt lacus, in iaculis mauris lectus at augue. Donec luctus nibh nec ullamcorper feugiat. Phasellus felis urna, lobortis vitae lacus sit amet, tristique consectetur nibh.</p>
+                    </div>
+                    <div class="templatemo_servicecol2">
+                    <div class="col-md-3 col-sm-4">
+                        	 <div class="hexagon hexagonteam gallery-item">
+                               <div class="hexagon-in1">
+                                <div class="hexagon-in2" style="background-image: url(static/team/4.jpg);">
+                                <div class="overlay templatemo_overlay1">
+                                	<a href="#fb">
+                                   	 <div class="smallhexagon">
+                                  	 	 <span class="fa fa-facebook"></span>
+                                 	  </div>
+                                    </a>
+                                    <a href="#tw">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-twitter"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#ln">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-linkedin"></span>
+                                    </div>
+                                    </a>
+                                    <a href="#rs">
+                                     <div class="smallhexagon">
+                                       <span class="fa fa-rss"></span>
+                                    </div>
+                                    </a>
+                                </div>
+
+                                <div class="clear"></div>
+                               	<div class="overlay templatemo_overlaytxt">Sed nonummy</div>
+                                </div>
+                            </div>
+                          </div>
+  			       </div>
+                    <div class="col-md-3 col-sm-8 templatemo_servicetxt">
+                    	<h2>HTML5 CSS3</h2>
+                        <p>Phasellus sodales magna orci, id scelerisque lectus faucibus a. Vivamus varius tincidunt sem. Etiam ultricies orci sit amet sem egestas varius vitae at lacus. Nunc blandit elit in mauris semper, id iaculis felis condimentum.</p>
+                    </div>
+                    </div>
+               </div>
+            </div>
+
+     </div>
+     </div>
+    <!--team end-->
+    <div class="clear"></div>
+    <!-- service start -->
+    <div class="content services" id="menu-3">
+    <div class="container">
+    	<div class="row templatemo_servicerow">
+        	<div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-bell"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3>Etiam vulputate</h3>
+                    <p>Vestibulum diam lorem, aliquet et sagittis ac, facilisis nec massa. Suspendisse sagittis leo diam, sed dapibus eros vehicula eu. Aenean nulla magna, gravida at dui in, fringilla vestibulum massa.</p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-briefcase"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3>Aliquam faucibus</h3>
+                    <p>Vivamus a purus vel ante fermentum bibendum. Sed laoreet, enim quis euismod egestas, risus tortor tincidunt lacus, in iaculis mauris lectus at augue. Donec luctus nibh nec ullamcorper feugiat.</p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-mobile"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3>Donec sagittis</h3>
+                    <p>Phasellus sodales magna orci, id scelerisque lectus faucibus a. Vivamus varius tincidunt sem. Etiam ultricies orci sit amet sem egestas varius vitae at lacus. Nunc blandit elit in mauris semper, id iaculis felis condimentum.</p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-trophy"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3>Integer tempus</h3>
+                    <p>Maecenas porttitor erat et enim dapibus, sit amet accumsan velit tincidunt. Etiam sapien urna, suscipit ut purus ac, convallis pulvinar tellus. In eu neque purus. Donec cursus dictum pulvinar.</p>
+                    </div>
+              </div>
+              <div class="templatemo_hexservices col-sm-6">
+            	<div class="blok text-center">
+                  <div class="hexagon-a">
+                     <a class="hlinktop" href="#">
+                     	 <div class="hexa-a">
+                         	<div class="hcontainer-a">
+                          <div class="vertical-align-a">
+                            <span class="texts-a"><i class="fa fa-thumb-tack"></i></span>
+                          </div>
+                        </div>
+                         </div>
+                     </a>
+                  </div>
+                     <div class="hexagonservices">
+                     	<a class="hlinkbott" href="#">
+                        <div class="hexa">
+                      	  <div class="hcontainer">
+                          <div class="vertical-align">
+                          <span class="texts"></span>
+                          </div>
+                        </div>
+                      </div>
+                        </a>
+                     </div>
+                     </div>
+                     <div class="templatemo_servicetext">
+                    <h3>Aliquam pellentesque</h3>
+                    <p>Nam auctor elementum dolor. Donec euismod, justo sed convallis blandit, ipsum erat mattis lectus, vel pharetra neque enim tristique risus. Ut consequat nisi vel justo. Curabitur in orci vel enim congue cursus.</p>
+                    </div>
+              </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- service end -->
+    <!-- contact start -->
+    <div class="content contact" id="menu-5">
+    <div class="container">
+     	<div class="row">
+        	<div class="col-md-4 col-sm-12">
+            	<div class="templatemo_contactmap">
+    			<div id="templatemo_map"></div>
+                <img src="static/templatemo_contactiframe.png" alt="contact map">
+                </div>
+                </div>
+            <div class="col-md-3 col-sm-12 leftalign">
+            	<div class="templatemo_contacttitle">Contact Information</div>
+                <div class="clear"></div>
+                <p>Integer eu neque sed mi fringilla pellentesque a eget leo. Duis ornare diam lorem, sit amet tempor mauris fringilla in. Etiam semper tempus augue, at vehicula metus. Nam vestibulum tortor nec congue ornare.</p>
+                <div class="templatemo_address">
+                	<ul>
+                	<li class="left fa fa-map-marker"></li>
+                    <li class="right">Nulla ut tellus, sit amet urna, <br>scelerisque pretium 10960</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-phone"></li>
+                    <li class="right">010-020-0770</li>
+                    <li class="clear"></li>
+                    <li class="left fa fa-envelope"></li>
+                    <li class="right">info@company.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+            	<form role="form">
+              	<div class="templatemo_form">
+                	<input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Name" maxlength="40">
+              	</div>
+              	<div class="templatemo_form">
+                	<input name="email" type="text" class="form-control" id="email" placeholder="Your Email" maxlength="40">
+              	</div>
+               	<div class="templatemo_form">
+                	<input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" maxlength="40">
+              	</div>
+              	<div class="templatemo_form">
+	            	<textarea name="message" rows="10" class="form-control" id="message" placeholder="Message"></textarea>
+              	</div>
+              	<div class="templatemo_form"><button type="button" class="btn btn-primary">Send Message</button></div>
+            </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- contact end -->
+	<!-- footer start -->
+  <!--
+    <div class="templatemo_footer">
+    	<div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-12">
+            	<span>Copyright &copy; 2014 Company Name | Design: TemplateMo</span>
+            </div>
+            <div class="col-md-3 col-sm-12 templatemo_rfooter">
+            	  <a href="#">
+                 	<div class="hex_footer">
+					<span class="fa fa-facebook"></span>
+					</div>
+                  </a>
+                  <a href="#">
+                    <div class="hex_footer">
+					 <span class="fa fa-twitter"></span>
+					</div>
+                    </a>
+                  <a href="#">
+                 	<div class="hex_footer">
+					 <span class="fa fa-linkedin"></span>
+					</div>
+                 </a>
+                <a href="#">
+                	<div class="hex_footer">
+					 <span class="fa fa-rss"></span>
+					</div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div> -->
+    <!-- footer end -->
+	<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Load More');
+		} else {
+			$this.text('Load Less');
+		}
+	});
+    </script>
+	<!-- templatemo 400 polygon -->
+  </body>
+</html>
