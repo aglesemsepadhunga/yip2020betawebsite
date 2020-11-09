@@ -1,5 +1,6 @@
-h1{
+h4{
 text-align : center;
+font-weight: 600;
 }
 
 
@@ -52,10 +53,26 @@ a.btn {
   color: #ffffff;
   display: inline-block;
   padding: 6px 30px 8px;
-  position: relative;
+  position: absolute;
   text-decoration: none;
   -webkit-transition: all 0.1s 0s ease-out;
   transition: all 0.1s 0s ease-out;
+
+}
+.btn2{
+  background: #0096a0;
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  position: relative;
+    text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.1s 0s ease-out;
+  transition: all 0.1s 0s ease-out;
+
 }
 .no-touch a.btn:hover {
   background: #00a2ad;
@@ -74,6 +91,24 @@ a.btn:active {
   -webkit-transition: all 0.025s 0s ease-out;
   transition: all 0.025s 0s ease-out;
 }
+.no-touch a.btn2:hover {
+  background: #00a2ad;
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: all 0.25s 0s ease-out;
+  transition: all 0.25s 0s ease-out;
+}
+.no-touch a.btn2:active,
+a.btn2:active {
+  background: #008a93;
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  -webkit-transform: translate3d(0, 1px, 0);
+          transform: translate3d(0, 1px, 0);
+  -webkit-transition: all 0.025s 0s ease-out;
+  transition: all 0.025s 0s ease-out;
+}
+
 div.cards {
   margin: 80px auto;
   max-width: 960px;
@@ -153,6 +188,8 @@ div.card div.card-description {
   padding: 0 15px 10px;
   position: relative;
   font-size: 14px;
+  font-weight: 600;
+  color: #000;
 }
 div.card div.card-actions {
   box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
