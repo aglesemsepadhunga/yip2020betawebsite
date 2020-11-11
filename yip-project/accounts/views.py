@@ -68,7 +68,7 @@ def signup(request):
 
                 newteamdata.save()
                 auth.login(request,user)
-                return show(request)
+                return dashboard(request)
         else: return render(request,'accounts/signup.html',{'error':"Enter same password in both fields."})
 
     else:
@@ -89,3 +89,4 @@ def show(request):
         
     return render(request, 'yip/show.html', context)
          
+def dashboard(request): return render(request,'accounts/dashboard.html')

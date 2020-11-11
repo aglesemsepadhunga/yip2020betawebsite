@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  {% load staticfiles %}
+  {% load static %}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +64,8 @@
           <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'contacts' %}">Contacts</a></div>
           <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2019</a></div>
           <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2018</a></div>
-          <div class="col s12 l6"><a class="flow-text" href="{% url 'login' %}">Login</a></div>
+          <!-- <div class="col s12 l6"><a class="flow-text" href="{% url 'login' %}">Login</a></div> -->
+          <div class="col s12 l6"><a class="flow-text white-text" href="{% url 'rulebook' %}">Rule Book</a></div>
           <div class="col s12 l6"><a class="flow-text" href="{% url 'signup' %}">Sign Up</a></div>
         </div>
       </div>

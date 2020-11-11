@@ -5,5 +5,6 @@ urlpatterns = [
     path('logout/',views.logout,name = 'logout'),
     path('signup/',views.signup, name = 'signup'),
     path('show/',views.show),
+    path('dashboard/',views.dashboard),
     path('get/ajax/validate/nickname', views.teamname_check, name = "teamname_check"),
 ]

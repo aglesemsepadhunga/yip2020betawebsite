@@ -26,3 +26,5 @@ def login(request):
     return render(request,'yip/login.html')
 def signup(request):
     return render(request,'yip/signup.html')
+def rulebook(request):
+    return render(request,'yip/rulebook.html')
