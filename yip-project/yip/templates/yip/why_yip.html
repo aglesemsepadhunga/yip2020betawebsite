@@ -12,11 +12,11 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700'><link rel="stylesheet" href="/static/styleforwhyyip.css">
 
-
 </head>
 <body>
+<div class="bodyforwhyyip">
 <!-- partial:index.partial.html -->
-<h2 class="title" style="font-size:40px;">Why YIP?</h2>
+<h1 class="title">Why YIP?</h1>
 
 <div id="app" class="container">
 <card data-image="/static/innovation.jpeg">
@@ -38,22 +38,22 @@ Don't try to edit/change any other file in the repo, except the once alloted to 
 <script>
   Vue.config.devtools = true;
 
-  Vue.component('card', {
-    template: `
-      <div class="card-wrap"
-        @mousemove="handleMouseMove"
-        @mouseenter="handleMouseEnter"
-        @mouseleave="handleMouseLeave"
-        ref="card">
-        <div class="card"
-          :style="cardStyle">
-          <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
-          <div class="card-info">
-            <slot name="header"></slot>
-            <slot name="content"></slot>
-          </div>
-        </div>
-      </div>`,
+Vue.component('card', {
+template: `
+  <div class="card-wrap"
+    @mousemove="handleMouseMove"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    ref="card">
+    <div class="card"
+      :style="cardStyle">
+      <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+      <div class="card-info">
+        <slot name="header"></slot>
+        <slot name="content"></slot>
+      </div>
+    </div>
+  </div>`,
 mounted() {
   this.width = this.$refs.card.offsetWidth;
   this.height = this.$refs.card.offsetHeight;
