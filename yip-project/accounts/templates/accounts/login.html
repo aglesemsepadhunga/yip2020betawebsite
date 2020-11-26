@@ -165,7 +165,8 @@
 		<h3 class="white-text">Welcome</h3>
 	  <div class="row container">
 	    <div class="input-field col s12">
-	      <input placeholder="Username" type="text" class="white center-align teal-text text-accent-3" name="username">
+		  <input placeholder="Team Name" type="text" class="white center-align teal-text text-accent-3" name="usernamecap">
+		  <input type="text" name="username" id="username" style="display: none;">
 	    </div>
 	    <div class="input-field col s12">
 	      <input placeholder="Password" type="password" class="white center-align teal-text text-accent-3" name="password">
@@ -177,5 +178,21 @@
 	</form>
 </div>
 
+<script>
+	const titleInput = document.querySelector('input[name=usernamecap]');
+	const slugInput = document.querySelector('input[name=username]');
+
+const slugify = (val) =>{
+  
+  return val.toString().toLowerCase().trim()
+  //replace & with '-and-'
+  .replace(/&/g,'-and-')
+  //replace space,non word characters and dashes with '-'
+  .replace(/[\s\W-]+/g,'-')
+};
+titleInput.addEventListener('keyup',(e)=>{
+  slugInput.setAttribute('value',slugify(titleInput.value));
+});
+</script>
 <!-- ==========Write all your code above this point============ -->
 {% endblock %}

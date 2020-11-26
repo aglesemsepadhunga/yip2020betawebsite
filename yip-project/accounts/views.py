@@ -38,6 +38,7 @@ def signup(request):
                 school=request.POST['school'],
                 team_name=request.POST['teamnamecap'],
                 ps=request.POST['ps'],
+                publi=request.POST['publi'],
                 teacher_name=request.POST['teachername'],
                 teacher_email=request.POST['teacheremail'],
                 teacher_phone_num=request.POST['teacherphone'],

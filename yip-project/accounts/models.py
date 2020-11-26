@@ -5,6 +5,7 @@ class extendedteaminfo(models.Model):
 	school = models.CharField(max_length=250)
 	team_name = models.CharField(max_length=250,unique=True)
 	ps = models.IntegerField()
+	publi = models.IntegerField(default=0)
 	teacher_name = models.CharField(max_length=200,blank=True)
 	teacher_email = models.EmailField(blank=True)
 	teacher_phone_num = models.CharField(max_length=12,blank=True)
