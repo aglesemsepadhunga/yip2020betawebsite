@@ -12,3 +12,9 @@ python manage.py migrate
 python manage.py runserver
 
 This will open up the server and you will get a link of your website which would look something like this http://127.0.0.1:8000/
+
+Some relevant and nice articles
+
+https://realpython.com/python-virtual-environments-a-primer/#using-virtual-environments
+
+https://www.e2enetworks.com/help/knowledge-base/how-to-install-django-on-ubuntu-18-04-16-04-lts/

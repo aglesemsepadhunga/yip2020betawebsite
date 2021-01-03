@@ -46,6 +46,14 @@
 .container .white-text .white-text{
   font-family: Arial, Helvetica, sans-serif !important;
 }
+@media only screen and (max-width: 700px) {
+  #logox{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 60px;
+}
+}
   </style>
 </head>
 <body>
@@ -67,7 +75,7 @@
           <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2019</a></div>
           <div class="col s12 l6"><a class="white-text flow-text" href="{% url 'prev_yip' %}">YIP 2018</a></div>
           <!-- <div class="col s12 l6"><a class="flow-text" href="{% url 'login' %}">Login</a></div> -->
-          <div class="col s12 l6"><a class="flow-text white-text" href="{% url 'rulebook' %}">Rule Book</a></div>
+          <div class="col s12 l6"><a class="flow-text white-text" href="/static/rulebook.pdf">Rule Book</a></div>
           <div class="col s12 l6"><a class="flow-text" href="{% url 'signup' %}">Sign Up</a></div>
         </div>
       </div>

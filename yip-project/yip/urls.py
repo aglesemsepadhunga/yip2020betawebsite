@@ -30,5 +30,4 @@ urlpatterns = [
     path('themes/', views.themes, name='themes'),
     path('why_yip/', views.why_yip, name='why_yip'),
     path('winners/', views.winners, name='winners'),
-    path('rulebook/', views.rulebook, name='rulebook'),
 ]
