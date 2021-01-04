@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+{% extends 'yip/base.html' %}
+{% block content %}
+
+<!-- This is the "Contact" section of the website.
+Try to write all the code as neat and descriptive as possible with proper indentations as others will also have to work on the same code, so the code must be human-readable and not just machine readable.
+Don't try to edit/change any other file in the repo, except the once alloted to you. Otherwise you get errors using GITHUB -->
+<!-- ==========Write all your code below this point============ -->
   <head>
     <title>GALLERY</title>
     <meta name="keywords" content="" />
@@ -35,7 +41,7 @@
   </script>
   <style>
     html, body {
-    	font-family: Tahoma, Arial;
+    	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     	padding: 0px;
     	margin: 0px;
     	color: #e7e7e7;
@@ -52,7 +58,7 @@
     }
 
     a {
-    	color: #b69e40; outline: 0;
+    	color: #039BE5; outline: 0;
     }
 
     a:hover {
@@ -60,7 +66,7 @@
     }
 
     a:active, a:focus {
-    	color: #b69e40;
+    	color: #039BE5;
     	border: none;
     	text-decoration: none;
     }
@@ -72,7 +78,7 @@
     }
 
     h1, h2, h3, h4, h5, h6 {
-    	font-family: Tahoma, Arial;
+    	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     	font-weight: 400;
     }
 
@@ -123,7 +129,7 @@
       text-transform: uppercase;
     }
     .site-header .main-navigation ul li a.active {
-      color: #b69e40;
+      color: #039BE5;
       text-decoration: none;
     }
     .site-header .templatemo_logo {
@@ -133,12 +139,12 @@
       font-weight: 700;
     }
 
-    a.menu-toggle-btn {
+  /*  a.menu-toggle-btn {
       padding: 12px 0;
       display: block;
       color: white;
       font-size: 24px;
-    }
+    } */
 
     .responsive-menu {
       display: none;
@@ -245,10 +251,10 @@
     .smallhexagon {
     	width: 40px;
     	height: 46px;
-    	background: #b69e40;
+    	background: #039BE5;
     	position: relative;
     	background: url(../static/templatemo_teamhexa.png) no-repeat;
-    	margin-bottom: 10px;
+    	margin-bottom: 100px;
     }
     .smallhexagon:before {
     	position: absolute;
@@ -297,7 +303,7 @@
     }
 
     .hexagonservices a.hlinkbott:hover .hexa {
-      background: #b69e40;
+      background: #039BE5;
     }
     .templatemo_servicetext	{ float: left; margin-top: 230px; }
     .templatemo_hexservices	{ width: 20%; margin-top: -10%; }
@@ -311,7 +317,7 @@
       padding-bottom: 57.7%;
       background: #393e42;
       position: absolute;
-      color: #b69e40;
+      color: #039BE5;
       font-family: Futura, "Trebuchet MS", Arial, sans-serif;
       font-size: 42px;
       -webkit-transition: all 0.2s ease-in-out;
@@ -375,7 +381,7 @@
       height: 0;
       padding-bottom: 57.7%;
       margin: 0;
-      background: #b69e40;
+      background: #039BE5;
       position: absolute;
       color: #FFF;
       font-family: Futura, "Trebuchet MS", Arial, sans-serif;
@@ -529,7 +535,7 @@
     .templatemo_address	ul li.left{
     	float: left;
     	width: 40px;
-    	color: #b69e40;
+    	color: #039BE5;
     	font-size: 22px;
     }
     .templatemo_address	ul li.rigth{
@@ -567,7 +573,7 @@
     	text-align: center;
     	color: #ffffff;
     	border-radius: 0px;
-    	background: #b69e40;
+    	background: #039BE5;
     	border: none;
     	text-transform: uppercase;
     	font-size: 14px;
@@ -786,6 +792,7 @@ right: 10px;
 height: 120px;
 }
 </style>
+<body>
     <a href="/" title="Young Innovators Program"><img src="/static/logo.png" id="logox" class="responsive-img" id="logo-barc"></a>
   	<div class="site-header">
 		<div class="main-navigation">
@@ -799,12 +806,9 @@ height: 120px;
 			</div>-->
 			<div class="container">
 				<div class="row templatemo_gallerygap">
-					<div class="col-md-12 responsive-menu">
-						<a href="#" class="menu-toggle-btn">
-				            <i class="fa fa-bars"></i>
-				        </a>
+				<!--	<div class="col-md-12 responsive-menu"> -->
 					</div>
-          <h2 style="font-size:50px; color: black">GALLERY</h2>
+          <h2 style="font-size:50px; color: black; margin-bottom: 100px">GALLERY</h2>
                     <!--<div class="col-md-3 col-sm-12">
                     	<a href="#"><img src="static/templatemo_logo.jpg" alt="Polygon HTML5 Template"></a>
                     </div>-->
@@ -824,10 +828,7 @@ height: 120px;
                                 Contact</a></li>
 						</ul>
 					</div> -->
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
     <div id="menu-container">
     <!-- gallery start -->
     <div class="content homepage" id="menu-1">
@@ -1510,3 +1511,6 @@ height: 120px;
 	<!-- templatemo 400 polygon -->
   </body>
 </html>
+
+<!-- ==========Write all your code above this point============ -->
+{% endblock %}
